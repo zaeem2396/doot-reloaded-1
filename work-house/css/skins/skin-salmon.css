@@ -1,0 +1,42 @@
+/*
+
+Template:  Work House - Responsive Multi-purpose HTML5 Template
+Author: https://www.potenzaglobalsolutions.com
+Design and Developed by: https://www.potenzaglobalsolutions.com
+
+NOTE: This is color stylesheet of Color Scheme.
+
+*/
+
+/*************************
+		General
+*************************/
+/** selection **/
+*::-moz-selection { background: #056c5f; color: #fff; text-shadow: none; }
+::-moz-selection { background: #056c5f; color: #fff; text-shadow: none; }
+::selection { background: #056c5f; color: #fff; text-shadow: none; }
+
+/*************************
+	 Background Color
+*************************/
+.bg-theme, .bg-theme:hover, #back-to-top .top, .navbar .navbar-nav .dropdown-menu .dropdown-item:after, .navbar .navbar-nav .dropdown-menu li.active > .dropdown-item:after, .nav-pills .nav-link.active, .nav-pills .show>.nav-link, .section-title .subtitle:before, .btn.btn-theme, .accordion-style-2 .card-header a, .accordion-style-2 .card-header a:hover, .accordion-style-3 .card-header a, .accordion-style-3 .card-header a:hover, .bg-theme-hover:active, .bg-theme-hover:focus, .bg-theme-hover:hover, .footer-widget-social a i:hover, .owl-carousel .owl-dots .owl-dot:hover span, .owl-carousel .owl-dots .owl-dot.active span, .feature-box .border, .membership-pricing-table table .plan-header-standard, .price.active .header, .progress-bar, .nav-pills .nav-link.active, .nav-pills .show>.nav-link, .tabs-style-1 .nav-tabs .nav-link.active, .tabs-style-1 .nav-tabs .nav-link:hover, del, mark, .dropcap, .isotope-filters button.active, .isotope-filters button:hover, .portfolio-item .portfolio-overlay, .portfolio-item a.popup:hover, .blog-card.blockquote blockquote, .blog-card.blockquote, .blog .timeline li.entry-date-bottom a:hover, .blog .timeline li:hover .timeline-badge, .card-title.post-category a, .our-history .timeline:before, .login-bg .login-title, .register-bg .register-title, .btn.btn-dark:hover, .btn.btn-dark:focus, .btn-dark:active, .footer .footer-tags li a:hover, .header.fancy-topbar .topbar, .btn.btn-outline-theme:hover, .btn.btn-outline-theme:focus, .btn.btn-outline-theme:active, .rev-button, .navbar-nav .dropdown-menu .blog-card:before, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,.bg-overlay-theme-30:before,.bg-overlay-theme-40:before,.bg-overlay-theme-50:before,.bg-overlay-theme-60:before,.bg-overlay-theme-70:before,.bg-overlay-theme-80:before,.bg-overlay-theme-90:before,.contact-form-overlay:before,#main-slider.cleaning .border-rotate:after { background: #056c5f;}
+
+/*************************
+        Color
+*************************/
+.text-theme, .text-theme-hover:hover, a, .topbar ul li a:hover, .header.default .navbar .navbar-nav .active>.nav-link, .header.default .navbar .navbar-nav .nav-link.active, .header.default .navbar .navbar-nav .nav-link.show, .header.default .navbar .navbar-nav .show>.nav-link, .header.default .navbar .navbar-nav .nav-link:hover, ul.page-breadcrumb li a:hover, .page-title.bg-gray ul.page-breadcrumb li span, .page-title.bg-gray ul.page-breadcrumb li a:hover, .header.dark-topbar .navbar .navbar-nav .active>.nav-link, .header.dark-topbar .navbar .navbar-nav .nav-link.active, .header.dark-topbar .navbar .navbar-nav .nav-link.show, .header.dark-topbar .navbar .navbar-nav .show>.nav-link, .header.dark-topbar .navbar .navbar-nav .nav-link:hover, .navbar .navbar-nav .active>.nav-link, .navbar .navbar-nav .nav-link.active, .navbar .navbar-nav .nav-link.show, .navbar .navbar-nav .show>.nav-link, .navbar .navbar-nav .nav-link:hover, .footer-useful-link ul li a:hover, .accordion-style-1 .card-header a, .accordion-style-1 .card-header a:hover, .btn-link, .feature-box i, .footer-widget a:hover, .footer-widget a, .pricing-content .pricing-table-list ul li i, a:focus, a:hover, .dropcap.border, .dropcap.gray, ul.list li:after, .sidebar-widget .recent-post .recent-post-info span, .sidebar-widget .widget-categories li a:hover, .sidebar-widget .widget-categories li a:hover i, .sidebar-widget .recent-post .recent-post-info a:hover, .port-post-social a:hover, .port-meta li b, .comments-1 .comments-info a, #two+label:before, #two+label:after, .widget-services li a:hover, .footer .copyright ul li a:hover, .footer .usefull-link ul li a:hover, .footer .social ul li a i:hover, .footer .footer-social ul li a:hover, .hover-overlay .icon-circle:hover, .hover-overlay .icon-square:hover, .header.light-topbar .topbar ul li a:hover, .remember-checkbox a, button, input { color: #056c5f; }
+
+/*************************
+	 Border Color
+*************************/
+.btn.btn-theme, .membership-pricing-table table .plan-header-standard, .tabs-style-1 .nav-tabs .nav-link, .tabs-style-2 .nav-tabs li:hover .nav-link, .tabs-style-2 .nav-tabs li .nav-link.active, .tabs-style-3 .nav-tabs .nav-link.active, .isotope-filters button.active, .isotope-filters button:hover, .blog .timeline li:hover .timeline-panel, .blog .timeline li:hover .timeline-badge, .blog .timeline li:hover .timeline-badge, .our-history .timeline > li > .timeline-badge, .remember-checkbox label:before, .btn.btn-dark:hover, .btn.btn-dark:focus, .btn-dark:active, .btn-link i, .widget-services, .btn.btn-outline-theme, .btn.btn-outline-theme:hover, .btn.btn-outline-theme:focus, .btn.btn-outline-theme:active, .bg-dark a.btn.btn-theme:hover, .bg-dark a.btn.btn-theme:active, .bg-dark a.btn.btn-theme:focus { border-color: #056c5f; }
+.blog .timeline li:hover .timeline-panel:before { border-left-color: #056c5f; border-right-color: #056c5f; }
+#main-slider.gardener .border-b{  border-bottom:2px solid #056c5f !important; }
+#main-slider.moving .border-l:before, #main-slider.moving .border-r:before {background: #056c5f;}
+
+/*************************
+	 Rgba Background Color
+*************************/
+.card:hover .hover-overlay.effect-scale, .card_img:hover .hover-overlay.effect-scale:hover { background-color: rgb(5 108 95 / 82%); }
+.navbar-light .navbar-toggler { color: rgb(5 108 95 / 82%); }
+.rev-bg, .rev-button, .progress-bar-new {background-color: #056c5f !important;}

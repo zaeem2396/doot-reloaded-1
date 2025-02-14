@@ -9017,3 +9017,7 @@ select.form-control:-ms-input-placeholder {
 .h-286 {
     height: 286px;
 }
+
+.service-br {
+    border-radius: 1rem;
+}

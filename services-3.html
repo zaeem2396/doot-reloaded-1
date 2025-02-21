@@ -66,6 +66,30 @@
 				height: 4.5rem;
 			}
 		}
+
+		@media (min-width: 992px) {
+			.fixed-servicelist {
+				position: fixed;
+				top: 25rem;
+				z-index: 1000;
+			}
+		}
+
+		@media (min-width: 992px) {
+
+			/* Apply only for desktop (≥992px) */
+			.service-custom-margin {
+				margin-left: 10rem;
+			}
+		}
+
+		@media (max-width: 991px) {
+
+			/* Apply only for mobile (<992px) */
+			.service-custom-margin {
+				margin-left: 0 !important;
+			}
+		}
 	</style>
 
 </head>
@@ -268,7 +292,7 @@
 
 		<!-- OUR SERVICES -->
 		<section class="services-area services-area2">
-			<div class="container">
+			<div class="container-fluid px-md-5">
 				<!-- section title -->
 				<div class="row justify-content-center">
 					<div class="col-md-12">
@@ -335,135 +359,164 @@
 						<div class="row g-4">
 							<!-- Card 1 -->
 							<div class="col-12">
-								<div class="card h-100">
-									<div class="card-img">
-										<a href="service-details-left-sidebar.html">
-											<img style="height: 250px; width: 350px; margin-left: 10rem" src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg"
-												alt="" class="img-fluid service-br">
-										</a>
-									</div>
-									<div class="card-body" style="margin-left: 10rem">
+								<div class="card h-100 d-flex flex-row align-items-center position-relative">
+									<div class="card-body" style="width: 60%;">
 										<a href="service-details-left-sidebar.html">
 											<h4 class="card-title">Home Cleaning Service</h4>
 										</a>
-										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit? Fugiat commodi facilis et hic, beatae iure facere, repudiandae deserunt perspiciatis nihil maiores?</p>
+										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+											Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
+										</p>
 										<a href="service-details-left-sidebar.html"
 											class="btn service-br btn-sm bg-dark text-white">Read more</a>
+									</div>
+									<div class="card-img position-relative" style="width: 40%;">
+										<img src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg"
+											alt="Service Image" class="img-fluid service-br rounded"
+											style="width: 150px; height: 100px; object-fit: cover;">
+										<button type="button" class="btn btn-primary position-absolute"
+											style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
+											Add
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<!-- Card 2 -->
 							<div class="col-12">
-								<div class="card h-100">
-									<div class="card-img">
-										<a href="service-details-left-sidebar.html">
-											<img style="height: 250px; width: 350px; margin-left: 10rem" src="https://safaiwale.in/wp-content/uploads/2021/11/ac-cleaning-services.jpg"
-												alt="" class="img-fluid service-br">
-										</a>
-									</div>
-									<div class="card-body" style="margin-left: 10rem">
+								<div class="card h-100 d-flex flex-row align-items-center position-relative">
+									<div class="card-body" style="width: 60%;">
 										<a href="service-details-right-sidebar.html">
 											<h4 class="card-title">AC Cleaning Service</h4>
 										</a>
-										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit? Fugiat commodi facilis et hic, beatae iure facere, repudiandae deserunt perspiciatis nihil maiores?</p>
+										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+											Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
+										</p>
 										<a href="service-details-left-sidebar.html"
 											class="btn service-br btn-sm bg-dark text-white">Read more</a>
+									</div>
+									<div class="card-img position-relative" style="width: 40%;">
+										<img src="https://safaiwale.in/wp-content/uploads/2021/11/ac-cleaning-services.jpg"
+											alt="Service Image" class="img-fluid service-br rounded"
+											style="width: 150px; height: 100px; object-fit: cover;">
+										<button type="button" class="btn btn-primary position-absolute"
+											style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
+											Add
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<!-- Card 3 -->
 							<div class="col-12">
-								<div class="card h-100">
-									<div class="card-img">
-										<a href="service-details-left-sidebar.html">
-											<img style="height: 250px; width: 350px; margin-left: 10rem" src="https://www.oneindiapestcontrol.com/wp-content/uploads/2023/01/Is-Commercial-Pest-Control-Different-From-Residential-Pest-Control.jpg"
-												alt="" class="img-fluid service-br">
-										</a>
-									</div>
-									<div class="card-body" style="margin-left: 10rem">
+								<div class="card h-100 d-flex flex-row align-items-center position-relative">
+									<div class="card-body" style="width: 60%;">
 										<a href="service-details-fullwidth.html">
 											<h4 class="card-title">Pest Control Service</h4>
 										</a>
-										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit? Fugiat commodi facilis et hic, beatae iure facere, repudiandae deserunt perspiciatis nihil maiores?</p>
+										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+											Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
+										</p>
 										<a href="service-details-left-sidebar.html"
 											class="btn service-br btn-sm bg-dark text-white">Read more</a>
+									</div>
+									<div class="card-img position-relative" style="width: 40%;">
+										<img src="https://www.oneindiapestcontrol.com/wp-content/uploads/2023/01/Is-Commercial-Pest-Control-Different-From-Residential-Pest-Control.jpg"
+											alt="Service Image" class="img-fluid service-br rounded"
+											style="width: 150px; height: 100px; object-fit: cover;">
+										<button type="button" class="btn btn-primary position-absolute"
+											style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
+											Add
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<!-- Card 4 -->
-							<div id="s1" class="col-12">
-								<div class="card h-100">
-									<div class="card-img">
-										<a href="service-details-left-sidebar.html">
-											<img style="height: 250px; width: 350px; margin-left: 10rem" src="https://images.jdmagicbox.com/quickquotes/listicle/listicle_1691741714044_3353f_6240x4000.jpg"
-												alt="" class="img-fluid service-br">
-										</a>
-									</div>
-									<div class="card-body" style="margin-left: 10rem">
+							<div class="col-12">
+								<div class="card h-100 d-flex flex-row align-items-center position-relative">
+									<div class="card-body" style="width: 60%;">
 										<a href="service-details-left-sidebar.html">
 											<h4 class="card-title">Disinfection Service</h4>
 										</a>
-										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit? Fugiat commodi facilis et hic, beatae iure facere, repudiandae deserunt perspiciatis nihil maiores?</p>
-										<button type="button" class="btn service-br btn-sm bg-dark text-white"
-											data-toggle="modal" data-target="#serviceModal">
-											Read more
+										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+											Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
+										</p>
+										<button type="button" class="btn btn-dark btn-sm text-white">Read more</button>
+									</div>
+									<div class="card-img position-relative" style="width: 40%;">
+										<img src="https://images.jdmagicbox.com/quickquotes/listicle/listicle_1691741714044_3353f_6240x4000.jpg"
+											alt="Service Image" class="img-fluid service-br rounded"
+											style="width: 150px; height: 100px; object-fit: cover;">
+										<button type="button" class="btn btn-primary position-absolute"
+											style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
+											Add
 										</button>
 									</div>
 								</div>
 							</div>
 
 							<!-- Card 5 -->
-							<div class="col-12">
-								<div class="card h-100">
-									<div class="card-img">
-										<a href="service-details-left-sidebar.html">
-											<img style="height: 250px; width: 350px; margin-left: 10rem" src="https://labeswomensalon.com/wp-content/uploads/2023/07/Blog-Feature-Image-1280-x-720-1.jpg"
-												alt="" class="img-fluid service-br">
-										</a>
-									</div>
-									<div class="card-body" style="margin-left: 10rem">
+							<div class="col-12" id="s1">
+								<div class="card h-100 d-flex flex-row align-items-center position-relative">
+									<div class="card-body" style="width: 60%;">
 										<a href="service-details-right-sidebar.html">
 											<h4 class="card-title">Women Salon at Home</h4>
 										</a>
-										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit? Fugiat commodi facilis et hic, beatae iure facere, repudiandae deserunt perspiciatis nihil maiores?</p>
+										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+											Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
+										</p>
 										<a href="service-details-left-sidebar.html"
 											class="btn service-br btn-sm bg-dark text-white">Read more</a>
+									</div>
+									<div class="card-img position-relative" style="width: 40%;">
+										<img src="https://labeswomensalon.com/wp-content/uploads/2023/07/Blog-Feature-Image-1280-x-720-1.jpg"
+											alt="Service Image" class="img-fluid service-br rounded"
+											style="width: 150px; height: 100px; object-fit: cover;">
+										<button type="button" class="btn btn-primary position-absolute"
+											style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
+											Add
+										</button>
 									</div>
 								</div>
 							</div>
 
 							<!-- Card 6 -->
 							<div class="col-12">
-								<div class="card h-100">
-									<div class="card-img">
-										<a href="service-details-left-sidebar.html">
-											<img style="height: 250px; width: 350px; margin-left: 10rem" src="https://content.jdmagicbox.com/comp/def_content/plumbers/4-plumbers-10-jsxp9.jpg"
-												alt="" class="img-fluid service-br">
-										</a>
-									</div>
-									<div class="card-body" style="margin-left: 10rem">
+								<div class="card h-100 d-flex flex-row align-items-center position-relative">
+									<div class="card-body" style="width: 60%;">
 										<a href="service-details-fullwidth.html">
 											<h4 class="card-title">Plumbing Service</h4>
 										</a>
-										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit? Fugiat commodi facilis et hic, beatae iure facere, repudiandae deserunt perspiciatis nihil maiores?</p>
+										<p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+											Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
+										</p>
 										<a href="service-details-left-sidebar.html"
 											class="btn service-br btn-sm bg-dark text-white">Read more</a>
 									</div>
+									<div class="card-img position-relative" style="width: 40%;">
+										<img src="https://content.jdmagicbox.com/comp/def_content/plumbers/4-plumbers-10-jsxp9.jpg"
+											alt="Service Image" class="img-fluid service-br rounded"
+											style="width: 150px; height: 100px; object-fit: cover;">
+										<button type="button" class="btn btn-primary position-absolute"
+											style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
+											Add
+										</button>
+									</div>
 								</div>
 							</div>
+
 						</div>
 					</div>
+
 
 				</div>
 			</div>
 		</section>
 
 		<!-- Service model starts -->
-		<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog"
-			aria-labelledby="serviceModalLabel" aria-hidden="true">
+		<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="serviceModalLabel"
+			aria-hidden="true">
 			<div class="modal-dialog modal-dialog-scrollable modal-lg" role="document" style="margin-top: -8rem;">
 				<div class="modal-content">
 					<div class="modal-header">

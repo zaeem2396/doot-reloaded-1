@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  # Laravel Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doot
+    restart: always
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    depends_on:
+      - mysql  
+
+  # PHPMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: doot_phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    restart: always
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+
+  # MySQL
+  mysql:
+    image: mysql:8.0
+    container_name: doot_storage
+    restart: always
+    environment:
+      MYSQL_DATABASE: doot
+      MYSQL_USER: doot
+      MYSQL_PASSWORD: doot
+      MYSQL_ROOT_PASSWORD: root_doot
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+  # Mailhog
+  mailhog:
+    image: mailhog/mailhog
+    container_name: doot_mailhog
+    ports:
+      - "1025:1025"    # SMTP server
+      - "8025:8025"    # Web UI
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppSettingsController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'app-settings'], function () {
     Route::post('create', [AppSettingsController::class, 'create']);
     Route::get('get', [AppSettingsController::class, 'get']);
+});
+
+/* Category route */
+Route::group(['prefix' => 'category'], function () {
+    Route::post('create', [CategoryController::class, 'create']);
+    Route::get('get', [CategoryController::class, 'get']);
 });
 
 Route::get('/', function () {

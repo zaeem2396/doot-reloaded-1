@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppSettingsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+/* App Setting route */
+Route::group(['prefix' => 'app-settings'], function () {
+    Route::post('create', [AppSettingsController::class, 'create']);
+    Route::get('get', [AppSettingsController::class, 'get']);
+});
 
 Route::get('/', function () {
     return view('index');

@@ -1,277 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from themes.iamabdus.com/biznex/1.3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 17:31:09 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
-<head>
-
-    <!-- SITE TITTLE -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homedoot</title>
-
-    <!-- PLUGINS CSS STYLE -->
-    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/plugins/selectbox/select_option1.css" rel="stylesheet">
-    <link href="assets/plugins/slick/slick.css" rel="stylesheet" media="screen">
-    <link href="assets/plugins/slick/slick-theme.css" rel="stylesheet" media="screen">
-    <link href="assets/plugins/prismjs/prism.css" rel="stylesheet">
-    <link href="assets/plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet" />
-    <link href="assets/plugins/fancybox/fancyMorph.css" rel="stylesheet" />
-    <link href="assets/plugins/selectbox/select_option1.css" rel="stylesheet">
-    <link href="assets/plugins/thin-line-icons/css/thin-line-icons.css" rel="stylesheet">
-    <link href="assets/plugins/isotope/isotope.min.css" rel="stylesheet">
-    <link href="assets/plugins/animate/animate.css" rel="stylesheet">
-    <link href="assets/plugins/daterangepicker/css/daterangepicker.css" rel="stylesheet">
-
-    <!-- CUSTOM CSS -->
-    <link href="assets/css/biznex.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/default.css" id="option_color">
-
-    <!-- FAVICON -->
-    <link href="assets/img/favicon.png" rel="shortcut icon">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+@include('include.header')
+<div class="main-wrapper home">
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-71155940-12"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-71155940-12');
-    </script>
-    <style>
-        .responsive-logo {
-            background-color: #000;
-            height: 7.5rem;
-            /* Default height for desktop */
-        }
-
-        @media (max-width: 768px) {
-
-            /* Apply styles for mobile (screens smaller than 768px) */
-            .responsive-logo {
-                height: 4.5rem;
-            }
-        }
-    </style>
-</head>
-
-<body id="body" class="home-classic boxed-menu">
-
-    <!-- Preloader -->
-    <div id="preloader" class="smooth-loader-wrapper">
-        <div class="preloader_container">
-            <div id="loader">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="mobile-sticky-header-overlay"></div>
-    <!-- TOPBAR -->
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9">
-                    <div class="topbar-content">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <a href="tel:+251-235-3256">+251-235-3256</a>
-                    </div>
-                    <div class="topbar-content">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:info@example.com ">info@example.com</a>
-                    </div>
-                    <div class="topbar-content">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p>New York, USA</p>
-                    </div>
-                </div>
-                <div class="col-sm-3 text-right d-none">
-                    <a href="#" style="background-color: #000;" class="btn btn-dark btn-default bold" data-morphing
-                        id="morphing" data-src="#morphing-content" href="javascript:;">Get a Quote</a>
-                </div>
-            </div>
-        </div>
-    </div><!-- TOPBAR ENDS-->
-
-    <!-- HEADER -->
-    <header id="pageTop" class="header">
-        <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-md main-nav bg-dark-navy">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-right">
-                    <span class="burger-menu icon-toggle"><i class="fa fa-bars"></i></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img class="responsive-logo" src="https://homedoot.com/public/assets/new_theme/img/logo.png" alt=""
-                        srcset="">
-                    <!-- Image Logo - if you want to use jpg or png format -->
-                    <!-- <img src="assets/img/logo.png" alt="Logo"> -->
-                </a>
-
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html"><span class="sr-only">(current)</span>Home</a>
-                        </li>
-                        <li class="nav-item dropdown drop_single ">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Pages</a>
-                            <ul class="dropdown-menu dd_first">
-                                <li><a href="page-contactus.html">Contact Us </a></li>
-                                <li><a href="page-member-details.html">Profile</a></li>
-                                <li><a href="page-team.html">Team</a></li>
-                                <li><a href="page-aboutus.html">About Us</a></li>
-                                <li><a href="page-career.html">Career</a></li>
-                                <li><a href="page-career-details.html">Career details</a></li>
-                                <li><a href="404.html">404 page</a></li>
-                                <li><a href="page-comingsoon.html">Coming Soon</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown drop_single ">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Services</a>
-                            <ul class="dropdown-menu dd_first">
-                                <li><a href="services-1.html">Services Style 1</a></li>
-                                <li><a href="services-2.html">Services Style 2</a></li>
-                                <li><a href="services-3.html">Services Style 3</a></li>
-                                <li><a href="service-details-left-sidebar.html">Service Details Left Sidebar</a></li>
-                                <li><a href="service-details-right-sidebar.html">Service Details Right Sidebar</a></li>
-                                <li><a href="service-details-fullwidth.html">Service Details Fullwidth</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown drop_single ">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Portfolio</a>
-                            <ul class="dropdown-menu dd_first">
-                                <li><a href="portfolio-2-column.html">Two column</a></li>
-                                <li><a href="portfolio-3-column.html">Three column</a></li>
-                                <li><a href="portfolio-4-column-fullwidth.html">Four column</a></li>
-                                <li><a href="project-style-1.html">Project style 1</a></li>
-                                <li><a href="project-style-2.html">Project style 2</a></li>
-                                <li><a href="project-style-3.html">Project style 3</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown drop_single ">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Blogs</a>
-                            <ul class="dropdown-menu dd_first">
-                                <li><a href="blog-classic-left-sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog-classic-right-sidebar.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-classic-fullwidth.html">Blog Fullwidth</a></li>
-                                <li><a href="blog-grid-two-column.html">Blog two column</a></li>
-                                <li><a href="blog-grid-three-column.html">Blog three column</a></li>
-                                <li><a href="blog-singlepost-left-sidebar.html">Post left Sidebar</a></li>
-                                <li><a href="blog-singlepost-right-sidebar.html">Post Right Sidebar</a></li>
-                            </ul>
-                        </li>
-
-                        <li class=" dropdown megaDropMenu nav-item ">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Elements</a>
-                            <ul class="row dropdown-menu">
-                                <li class="col-md-3 col-12">
-                                    <h6>General Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="basic-accordions.html">Accordions</a></li>
-                                        <li><a href="basic-alert.html">Alerts</a></li>
-                                        <li><a href="basic-animation.html">Animation</a></li>
-                                        <li><a href="basic-badge.html">Badge</a></li>
-                                        <li><a href="basic-background.html">Background</a></li>
-                                        <li><a href="basic-buttons.html">Buttons</a></li>
-                                        <li><a href="basic-buttons-group.html">Button Group</a></li>
-                                        <li><a href="basic-card.html">Card</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col-md-3 col-12">
-                                    <h6>General Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="basic-carousel.html">Carousel</a></li>
-                                        <li><a href="basic-countdown.html">Countdown</a></li>
-                                        <li><a href="basic-counter.html">Counter</a></li>
-                                        <li><a href="basic-divider.html">Dividers</a></li>
-                                        <li><a href="basic-forms.html">Forms</a></li>
-                                        <li><a href="basic-heading.html">Heading</a></li>
-                                        <li><a href="basic-icon-style.html">Icon styles </a></li>
-                                        <li><a href="basic-iconset.html">Iconset - FontAwesome </a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col-md-3 col-12">
-                                    <h6>General Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="basic-image.html">Image</a></li>
-                                        <li><a href="basic-map.html">Map</a></li>
-                                        <li><a href="basic-modal.html">Modal</a></li>
-                                        <li><a href="basic-progressbar.html">Progress</a></li>
-                                        <li><a href="basic-tabs.html">Tabs & wizards</a></li>
-                                        <li><a href="basic-tables.html">Tables</a></li>
-                                        <li><a href="basic-typography.html">Typography</a></li>
-                                        <li><a href="basic-video.html">Video & Audio</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col-md-3 col-12">
-                                    <h6>Theme Kit Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="kit-breadcrumb.html">Breadcrumb</a></li>
-                                        <li><a href="kit-gallery.html">Gallery</a></li>
-                                        <li><a href="kit-navbar.html">Navbar</a></li>
-                                        <li><a href="kit-pagination.html">Pagination</a></li>
-                                        <li><a href="kit-pricing.html">Pricing</a></li>
-                                        <li><a href="kit-team.html">Team</a></li>
-                                        <li><a href="kit-testimonials.html">Testimonials</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- header search -->
-                        <li class="nav-item">
-                            <a href="#" class="btn-search nav-link"><i class="fa fa-search"></i></a>
-                            <form class="search_form">
-                                <input type="text" name="search" placeholder="Search anything.." required>
-                                <button class="btn btn-primary btn-small" type="submit">Search</button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-                <!-- header search ends-->
-            </div><!-- NAVBAR ENDS-->
-        </nav>
-    </header>
-    <div class="main-wrapper home">
-
-
-        <!-- BANNER SLIDER CAROUSEL -->
-        <section class="banner mb-4">
+    <!-- BANNER SLIDER CAROUSEL -->
+    <section class="banner mb-4">
+        <div class="container-fluid">
             <div class="row">
                 <!-- First Section: Cards (Always Visible) -->
                 <div class="element_row col-md-6" style="margin-top: 10rem;">
@@ -354,630 +87,904 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- WHY CHOOSE US -->
-        <section class="more-feature bg--dark py-5">
-            <div class="container">
-                <div class="row align-items-center text-center text-md-left">
-                    <!-- Left Content (Text) -->
-                    <div class="col-12 col-md-4 order-2 order-md-1">
-                        <div class="more-feature-left">
-                            <div class="sectionTitle">
-                                <h3 class="text-white">Salon for Women</h3>
-                            </div>
-                            <div class="more-features">
-                                <h1 style="color: #a91d3b;">Discover Our Exquisite Women's Salon Services</h1>
-                            </div>
-                            <div class="mt-3">
-                                <button class="btn btn-md text-white" style="background-color: #a91d3b;">Book
-                                    Now</button>
-                            </div>
+    <!-- WHY CHOOSE US -->
+    <section class="more-feature bg--dark py-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-left">
+                <!-- Left Content (Text) -->
+                <div class="col-12 col-md-4 order-2 order-md-1">
+                    <div class="more-feature-left">
+                        <div class="sectionTitle">
+                            <h3 class="text-white">Salon for Women</h3>
+                        </div>
+                        <div class="more-features">
+                            <h1 style="color: #a91d3b;">Discover Our Exquisite Women's Salon Services</h1>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-md text-white" style="background-color: #a91d3b;">Book
+                                Now</button>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Right Content (Image) -->
-                    <div class="col-12 col-md-8 order-1 order-md-2">
-                        <img src="assets/img/home/women-salon-banner.webp" alt="women-salon-banner"
-                            class="img-fluid rounded">
+                <!-- Right Content (Image) -->
+                <div class="col-12 col-md-8 order-1 order-md-2">
+                    <img src="assets/img/home/women-salon-banner.webp" alt="women-salon-banner"
+                        class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTING UP -->
+    <section class="mt-5">
+        <div class="p-l-r">
+            <h2 class="text-center">Most ordered services</h2>
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <div class="card card-style3">
+                        <div class="card_img">
+                            <a href="javascript:void(0)"><img class="img-full loaded h-286"
+                                    data-original="assets/img/blog/blog1.jpg" alt="Card image"
+                                    src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg" data-was-processed="true"></a>
+                            <div style="background-color: #000 !important;" class="date-holder bg-primary">
+                                <span>2,999</span>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="javascript:void(0)">
+                                <h4 class="card-title">Home cleaning service</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-style3">
+                        <div class="card_img">
+                            <a href="javascript:void(0)"><img class="img-full loaded h-286"
+                                    data-original="assets/img/blog/blog2.jpg" alt="Card image"
+                                    src="https://dubaifixing.com/wp-content/uploads/2020/06/ac-cleaning.jpg" data-was-processed="true"></a>
+                            <div style="background-color: #000 !important;" class="date-holder bg-primary">
+                                <span>2,999</span>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="javascript:void(0)">
+                                <h4 class="card-title">Ac cleaning service</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-style3">
+                        <div class="card_img">
+                            <a href="javascript:void(0)"><img class="img-full loaded h-286"
+                                    data-original="assets/img/blog/blog3.jpg" alt="Card image"
+                                    src="https://www.oneindiapestcontrol.com/wp-content/uploads/2023/01/Is-Commercial-Pest-Control-Different-From-Residential-Pest-Control.jpg" data-was-processed="true"></a>
+                            <div style="background-color: #000 !important;" class="date-holder bg-primary">
+                                <span>2,999</span>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="javascript:void(0)">
+                                <h4 class="card-title">Pest control services</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-style3">
+                        <div class="card_img">
+                            <a href="javascript:void(0)"><img class="img-full loaded h-286"
+                                    data-original="assets/img/blog/blog3.jpg" alt="Card image"
+                                    src="https://images.jdmagicbox.com/quickquotes/listicle/listicle_1691741714044_3353f_6240x4000.jpg" data-was-processed="true"></a>
+                            <div style="background-color: #000 !important;" class="date-holder bg-primary">
+                                <span>2,999</span>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="javascript:void(0)">
+                                <h4 class="card-title">Disinfection service</h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- COUNTING UP -->
-        <section class="mt-5">
-            <div class="p-l-r">
-                <h2 class="text-center">Most ordered services</h2>
-                <div class="row mt-3">
-                    <div class="col-md-3">
-                        <div class="card card-style3">
-                            <div class="card_img">
-                                <a href="javascript:void(0)"><img class="img-full loaded h-286"
-                                        data-original="assets/img/blog/blog1.jpg" alt="Card image"
-                                        src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg" data-was-processed="true"></a>
-                                <div style="background-color: #000 !important;" class="date-holder bg-primary">
-                                    <span>2,999</span>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="javascript:void(0)">
-                                    <h4 class="card-title">Home cleaning service</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card card-style3">
-                            <div class="card_img">
-                                <a href="javascript:void(0)"><img class="img-full loaded h-286"
-                                        data-original="assets/img/blog/blog2.jpg" alt="Card image"
-                                        src="https://dubaifixing.com/wp-content/uploads/2020/06/ac-cleaning.jpg" data-was-processed="true"></a>
-                                <div style="background-color: #000 !important;" class="date-holder bg-primary">
-                                    <span>2,999</span>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="javascript:void(0)">
-                                    <h4 class="card-title">Ac cleaning service</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card card-style3">
-                            <div class="card_img">
-                                <a href="javascript:void(0)"><img class="img-full loaded h-286"
-                                        data-original="assets/img/blog/blog3.jpg" alt="Card image"
-                                        src="https://www.oneindiapestcontrol.com/wp-content/uploads/2023/01/Is-Commercial-Pest-Control-Different-From-Residential-Pest-Control.jpg" data-was-processed="true"></a>
-                                <div style="background-color: #000 !important;" class="date-holder bg-primary">
-                                    <span>2,999</span>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="javascript:void(0)">
-                                    <h4 class="card-title">Pest control services</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card card-style3">
-                            <div class="card_img">
-                                <a href="javascript:void(0)"><img class="img-full loaded h-286"
-                                        data-original="assets/img/blog/blog3.jpg" alt="Card image"
-                                        src="https://images.jdmagicbox.com/quickquotes/listicle/listicle_1691741714044_3353f_6240x4000.jpg" data-was-processed="true"></a>
-                                <div style="background-color: #000 !important;" class="date-holder bg-primary">
-                                    <span>2,999</span>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="javascript:void(0)">
-                                    <h4 class="card-title">Disinfection service</h4>
-                                </a>
-                            </div>
-                        </div>
+    <!-- OUR PORTFOLIO -->
+    <section class="portfolio-area">
+        <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="sectionTitle text-center">
+                        <h2>Our Services</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- OUR PORTFOLIO -->
-        <section class="portfolio-area">
-            <div class="container">
-                <!-- section title -->
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="sectionTitle text-center">
-                            <h2>Our Services</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- section title ends -->
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card_img">
-                                <a href="project-style-1.html">
-                                    <img class="img-full" data-original="assets/img/home/gallery/g1.jpg" />
-                                    <div class="hover-overlay effect-scale">
-                                        <div class="img_overlay-container">
-                                            <h4 class="img_overlay-title">Home cleaning service</h4>
-                                            <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit sed do eiusmod </p>
-                                            <div class="img_overlay-icon">
-                                                <a href="assets/img/projetcs/g1.jpg" class="icon link quick_view"
-                                                    data-fancybox="quick-view1" data-qw-form="qw-form-1"><i
-                                                        class="fa fa-search"></i></a>
-                                                <a href="project-style-1.html" class="icon link"><i
-                                                        class="fa fa-link"></i></a>
-                                                <span class="hidden">
-                                                    <a class="quick_view" data-fancybox="quick-view1"
-                                                        href="assets/img/projetcs/g1.jpg">#2</a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div id="qw-form-1" class="hidden">
-                                <div class="bg-image"
-                                    style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
-                                    <div class="project_specification">
-                                        <h2 class="text-primary">Project Details</h2>
-                                        <div class="row">
-                                            <div class="col-4 ">Clients:</div>
-                                            <div class="col-8 ">Jake Hemswire</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Category:</div>
-                                            <div class="col-8 ">Investment,Consulting</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Date:</div>
-                                            <div class="col-8 ">20 June, 2017</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Status:</div>
-                                            <div class="col-8 ">In Progress</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Website: </div>
-                                            <div class="col-8  text-primary">www.info@example.com</div>
+            <!-- section title ends -->
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card_img">
+                            <a href="project-style-1.html">
+                                <img class="img-full" data-original="assets/img/home/gallery/g1.jpg" />
+                                <div class="hover-overlay effect-scale">
+                                    <div class="img_overlay-container">
+                                        <h4 class="img_overlay-title">Home cleaning service</h4>
+                                        <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit sed do eiusmod </p>
+                                        <div class="img_overlay-icon">
+                                            <a href="assets/img/projetcs/g1.jpg" class="icon link quick_view"
+                                                data-fancybox="quick-view1" data-qw-form="qw-form-1"><i
+                                                    class="fa fa-search"></i></a>
+                                            <a href="project-style-1.html" class="icon link"><i
+                                                    class="fa fa-link"></i></a>
+                                            <span class="hidden">
+                                                <a class="quick_view" data-fancybox="quick-view1"
+                                                    href="assets/img/projetcs/g1.jpg">#2</a>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card_img">
-                                <a href="project-style-2.html">
-                                    <img class="img-full" data-original="assets/img/home/gallery/g2.jpg" />
-                                    <div class="hover-overlay effect-scale">
-                                        <div class="img_overlay-container">
-                                            <h4 class="img_overlay-title">SAc cleaning service</h4>
-                                            <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit sed do eiusmod </p>
-                                            <div class="img_overlay-icon">
-                                                <a href="assets/img/home/gallery/g2.jpg" class="icon link quick_view"
-                                                    data-fancybox="quick-view2" data-qw-form="qw-form-2"><i
-                                                        class="fa fa-search"></i></a>
-                                                <a href="project-style-2.html" class="icon link"><i
-                                                        class="fa fa-link"></i></a>
-                                                <span class="hidden">
-                                                    <a class="quick_view" data-fancybox="quick-view2"
-                                                        href="assets/img/home/gallery/g2.jpg">#2</a>
-                                                </span>
-                                            </div>
-                                        </div>
+                        <div id="qw-form-1" class="hidden">
+                            <div class="bg-image"
+                                style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
+                                <div class="project_specification">
+                                    <h2 class="text-primary">Project Details</h2>
+                                    <div class="row">
+                                        <div class="col-4 ">Clients:</div>
+                                        <div class="col-8 ">Jake Hemswire</div>
                                     </div>
-                                </a>
-                            </div>
-                            <div id="qw-form-2" class="hidden">
-                                <div class="bg-image"
-                                    style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
-                                    <div class="project_specification">
-                                        <h2 class="text-primary">Project Details 2</h2>
-                                        <div class="row">
-                                            <div class="col-4 ">Clients:</div>
-                                            <div class="col-8 ">Jake Hemswire</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Category:</div>
-                                            <div class="col-8 ">Investment,Consulting</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Date:</div>
-                                            <div class="col-8 ">20 June, 2017</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Status:</div>
-                                            <div class="col-8 ">In Progress</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Website: </div>
-                                            <div class="col-8  text-primary">www.info@example.com</div>
-                                        </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Category:</div>
+                                        <div class="col-8 ">Investment,Consulting</div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card_img">
-                                <a href="project-style-3.html">
-                                    <img class="img-full" data-original="assets/img/home/gallery/g3.jpg" />
-                                    <div class="hover-overlay effect-scale">
-                                        <div class="img_overlay-container">
-                                            <h4 class="img_overlay-title">Pest control service</h4>
-                                            <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit sed do eiusmod </p>
-                                            <div class="img_overlay-icon">
-                                                <a href="assets/img/home/gallery/g3.jpg" class="icon link quick_view"
-                                                    data-fancybox="quick-view3" data-qw-form="qw-form-3"><i
-                                                        class="fa fa-search"></i></a>
-                                                <a href="project-style-3.html" class="icon link"><i
-                                                        class="fa fa-link"></i></a>
-                                                <span class="hidden">
-                                                    <a class="quick_view" data-fancybox="quick-view3"
-                                                        href="assets/img/home/gallery/g3.jpg">#2</a>
-                                                </span>
-                                            </div>
-                                        </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Date:</div>
+                                        <div class="col-8 ">20 June, 2017</div>
                                     </div>
-                                </a>
-                            </div>
-                            <div id="qw-form-3" class="hidden">
-                                <div class="bg-image"
-                                    style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
-                                    <div class="project_specification">
-                                        <h2 class="text-primary">Project Details</h2>
-                                        <div class="row">
-                                            <div class="col-4 ">Clients:</div>
-                                            <div class="col-8 ">Jake Hemswire</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Category:</div>
-                                            <div class="col-8 ">Investment,Consulting</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Date:</div>
-                                            <div class="col-8 ">20 June, 2017</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Status:</div>
-                                            <div class="col-8 ">In Progress</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Website: </div>
-                                            <div class="col-8  text-primary">www.info@example.com</div>
-                                        </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Status:</div>
+                                        <div class="col-8 ">In Progress</div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card_img">
-                                <a href="project-style-1.html">
-                                    <img class="img-full" data-original="assets/img/home/gallery/g4.jpg" />
-                                    <div class="hover-overlay effect-scale">
-                                        <div class="img_overlay-container">
-                                            <h4 class="img_overlay-title">Women salon</h4>
-                                            <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit sed do eiusmod </p>
-                                            <div class="img_overlay-icon">
-                                                <a href="assets/img/home/gallery/g4.jpg" class="icon link quick_view"
-                                                    data-fancybox="quick-view4" data-qw-form="qw-form-4"><i
-                                                        class="fa fa-search"></i></a>
-                                                <a href="project-style-1.html" class="icon link"><i
-                                                        class="fa fa-link"></i></a>
-                                                <span class="hidden">
-                                                    <a class="quick_view" data-fancybox="quick-view4"
-                                                        href="assets/img/home/gallery/g4.jpg">#2</a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div id="qw-form-4" class="hidden">
-                                <div class="bg-image"
-                                    style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
-                                    <div class="project_specification">
-                                        <h2 class="text-primary">Project Details</h2>
-                                        <div class="row">
-                                            <div class="col-4 ">Clients:</div>
-                                            <div class="col-8 ">Jake Hemswire</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Category:</div>
-                                            <div class="col-8 ">Investment,Consulting</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Date:</div>
-                                            <div class="col-8 ">20 June, 2017</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Status:</div>
-                                            <div class="col-8 ">In Progress</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Website: </div>
-                                            <div class="col-8  text-primary">www.info@example.com</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card_img">
-                                <a href="project-style-2.html">
-                                    <img class="img-full" data-original="assets/img/home/gallery/g5.jpg" />
-                                    <div class="hover-overlay effect-scale">
-                                        <div class="img_overlay-container">
-                                            <h4 class="img_overlay-title">Plumbing service</h4>
-                                            <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit sed do eiusmod </p>
-                                            <div class="img_overlay-icon">
-                                                <a href="assets/img/blog/g5.jpg" class="icon link quick_view"
-                                                    data-fancybox="quick-view5" data-qw-form="qw-form-5"><i
-                                                        class="fa fa-search"></i></a>
-                                                <a href="project-style-2.html" class="icon link"><i
-                                                        class="fa fa-link"></i></a>
-                                                <span class="hidden">
-                                                    <a class="quick_view" data-fancybox="quick-view5"
-                                                        href="assets/img/blog/g5.jpg">#2</a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div id="qw-form-5" class="hidden">
-                                <div class="bg-image"
-                                    style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
-                                    <div class="project_specification">
-                                        <h2 class="text-primary">Project Details</h2>
-                                        <div class="row">
-                                            <div class="col-4 ">Clients:</div>
-                                            <div class="col-8 ">Jake Hemswire</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Category:</div>
-                                            <div class="col-8 ">Investment,Consulting</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Date:</div>
-                                            <div class="col-8 ">20 June, 2017</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Status:</div>
-                                            <div class="col-8 ">In Progress</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Website: </div>
-                                            <div class="col-8  text-primary">www.info@example.com</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card">
-                            <div class="card_img">
-                                <a href="project-style-3.html">
-                                    <img class="img-full" data-original="assets/img/home/gallery/g6.jpg" />
-                                    <div class="hover-overlay effect-scale">
-                                        <div class="img_overlay-container">
-                                            <h4 class="img_overlay-title">Sales Organization</h4>
-                                            <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit sed do eiusmod </p>
-                                            <div class="img_overlay-icon">
-                                                <a href="assets/img/home/gallery/g6.jpg" class="icon link quick_view"
-                                                    data-fancybox="quick-view6" data-qw-form="qw-form-6"><i
-                                                        class="fa fa-search"></i></a>
-                                                <a href="project-style-3.html" class="icon link"><i
-                                                        class="fa fa-link"></i></a>
-                                                <span class="hidden">
-                                                    <a class="quick_view" data-fancybox="quick-view6"
-                                                        href="assets/img/home/gallery/g6.jpg">#2</a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div id="qw-form-6" class="hidden">
-                                <div class="bg-image"
-                                    style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
-                                    <div class="project_specification">
-                                        <h2 class="text-primary">Project Details</h2>
-                                        <div class="row">
-                                            <div class="col-4 ">Clients:</div>
-                                            <div class="col-8 ">Jake Hemswire</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Category:</div>
-                                            <div class="col-8 ">Investment,Consulting</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Date:</div>
-                                            <div class="col-8 ">20 June, 2017</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Status:</div>
-                                            <div class="col-8 ">In Progress</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-4 ">Website: </div>
-                                            <div class="col-8  text-primary">www.info@example.com</div>
-                                        </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Website: </div>
+                                        <div class="col-8  text-primary">www.info@example.com</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="btn-container">
-                    <a href="portfolio-4-column-fullwidth.html" class="btn btn-default bg-navy bold">View More</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIAL SECTION -->
-        <section class="testimonial-area home-testimonial">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-md-6 promo-video-holder">
-                        <div class="promo-video">
-                            <img class="img-fluid" src="assets/img/home/v-poster.jpg" alt="">
-                            <a class="video-link" data-fancybox href="https://www.youtube.com/watch?v=sEl5hp8MEGs"><i
-                                    class="fa fa-play play-icon" aria-hidden="true"></i></a>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card_img">
+                            <a href="project-style-2.html">
+                                <img class="img-full" data-original="assets/img/home/gallery/g2.jpg" />
+                                <div class="hover-overlay effect-scale">
+                                    <div class="img_overlay-container">
+                                        <h4 class="img_overlay-title">SAc cleaning service</h4>
+                                        <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit sed do eiusmod </p>
+                                        <div class="img_overlay-icon">
+                                            <a href="assets/img/home/gallery/g2.jpg" class="icon link quick_view"
+                                                data-fancybox="quick-view2" data-qw-form="qw-form-2"><i
+                                                    class="fa fa-search"></i></a>
+                                            <a href="project-style-2.html" class="icon link"><i
+                                                    class="fa fa-link"></i></a>
+                                            <span class="hidden">
+                                                <a class="quick_view" data-fancybox="quick-view2"
+                                                    href="assets/img/home/gallery/g2.jpg">#2</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                    <!-- Right column -->
-                    <div class="col-md-6">
-                        <div class="bg-image" style="background-image: url('assets/img/home/t-poster.jpg'); ">
-                            <div id="home-testimonial" class="">
-                                <div class="card ">
-                                    <div class="card_img">
-                                        <img class="img-full" src="assets/img/home/cl1.jpg" alt="Card image">
+                        <div id="qw-form-2" class="hidden">
+                            <div class="bg-image"
+                                style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
+                                <div class="project_specification">
+                                    <h2 class="text-primary">Project Details 2</h2>
+                                    <div class="row">
+                                        <div class="col-4 ">Clients:</div>
+                                        <div class="col-8 ">Jake Hemswire</div>
                                     </div>
-                                    <div class="card-block">
-                                        <p>Lorem ipsum dolor sit amet constur adipisicing elit, sed do eiusmtempor incid
-                                            et dolore magna aliqu enim minim veniam quis nostrud exercittion</p>
-                                        <h4 class="text-white">Julia Robertson</h4>
-                                        <span class="text-primary">Happy Client</span>
+                                    <div class="row">
+                                        <div class="col-4 ">Category:</div>
+                                        <div class="col-8 ">Investment,Consulting</div>
                                     </div>
-                                </div>
-                                <div class="card ">
-                                    <div class="card_img">
-                                        <img class="img-full" src="assets/img/home/cl2.jpg" alt="Card image">
+                                    <div class="row">
+                                        <div class="col-4 ">Date:</div>
+                                        <div class="col-8 ">20 June, 2017</div>
                                     </div>
-                                    <div class="card-block">
-                                        <p>Lorem ipsum dolor sit amet constur adipisicing elit, sed do eiusmtempor incid
-                                            et dolore magna aliqu enim minim veniam quis nostrud exercittion</p>
-                                        <h4 class="text-white">Julia Robertson</h4>
-                                        <span class="text-primary">Happy Client</span>
+                                    <div class="row">
+                                        <div class="col-4 ">Status:</div>
+                                        <div class="col-8 ">In Progress</div>
                                     </div>
-                                </div>
-                                <div class="card ">
-                                    <div class="card_img">
-                                        <img class="img-full" src="assets/img/home/cl3.jpg" alt="Card image">
-                                    </div>
-                                    <div class="card-block">
-                                        <p>Lorem ipsum dolor sit amet constur adipisicing elit, sed do eiusmtempor incid
-                                            et dolore magna aliqu enim minim veniam quis nostrud exercittion</p>
-                                        <h4 class="text-white">Julia Robertson</h4>
-                                        <span class="text-primary">Happy Client</span>
+                                    <div class="row">
+                                        <div class="col-4 ">Website: </div>
+                                        <div class="col-8  text-primary">www.info@example.com</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- Right column -->
-
-                </div>
-            </div>
-        </section>
-
-        <!-- OUR SERVICES -->
-        <section class="services-area">
-            <div class="container">
-                <!-- section title -->
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="sectionTitle text-center">
-                            <h2>Our Services</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
-                        </div>
                     </div>
                 </div>
-                <!-- section title ends -->
-                <div class="row">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="media-box">
-                            <div class="media-icon">
-                                <i class="fa fa-line-chart"></i>
-                            </div>
-                            <div class="media-content">
-                                <a href="service-details-left-sidebar.html">
-                                    <h4>Consultative Training</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
-                                    labore</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card_img">
+                            <a href="project-style-3.html">
+                                <img class="img-full" data-original="assets/img/home/gallery/g3.jpg" />
+                                <div class="hover-overlay effect-scale">
+                                    <div class="img_overlay-container">
+                                        <h4 class="img_overlay-title">Pest control service</h4>
+                                        <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit sed do eiusmod </p>
+                                        <div class="img_overlay-icon">
+                                            <a href="assets/img/home/gallery/g3.jpg" class="icon link quick_view"
+                                                data-fancybox="quick-view3" data-qw-form="qw-form-3"><i
+                                                    class="fa fa-search"></i></a>
+                                            <a href="project-style-3.html" class="icon link"><i
+                                                    class="fa fa-link"></i></a>
+                                            <span class="hidden">
+                                                <a class="quick_view" data-fancybox="quick-view3"
+                                                    href="assets/img/home/gallery/g3.jpg">#2</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="qw-form-3" class="hidden">
+                            <div class="bg-image"
+                                style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
+                                <div class="project_specification">
+                                    <h2 class="text-primary">Project Details</h2>
+                                    <div class="row">
+                                        <div class="col-4 ">Clients:</div>
+                                        <div class="col-8 ">Jake Hemswire</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Category:</div>
+                                        <div class="col-8 ">Investment,Consulting</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Date:</div>
+                                        <div class="col-8 ">20 June, 2017</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Status:</div>
+                                        <div class="col-8 ">In Progress</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Website: </div>
+                                        <div class="col-8  text-primary">www.info@example.com</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="media-box">
-                            <div class="media-icon">
-                                <i class="fa fa-credit-card"></i>
-                            </div>
-                            <div class="media-content">
-                                <a href="service-details-right-sidebar.html">
-                                    <h4>High Performance Selling</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
-                                    labore</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card_img">
+                            <a href="project-style-1.html">
+                                <img class="img-full" data-original="assets/img/home/gallery/g4.jpg" />
+                                <div class="hover-overlay effect-scale">
+                                    <div class="img_overlay-container">
+                                        <h4 class="img_overlay-title">Women salon</h4>
+                                        <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit sed do eiusmod </p>
+                                        <div class="img_overlay-icon">
+                                            <a href="assets/img/home/gallery/g4.jpg" class="icon link quick_view"
+                                                data-fancybox="quick-view4" data-qw-form="qw-form-4"><i
+                                                    class="fa fa-search"></i></a>
+                                            <a href="project-style-1.html" class="icon link"><i
+                                                    class="fa fa-link"></i></a>
+                                            <span class="hidden">
+                                                <a class="quick_view" data-fancybox="quick-view4"
+                                                    href="assets/img/home/gallery/g4.jpg">#2</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="qw-form-4" class="hidden">
+                            <div class="bg-image"
+                                style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
+                                <div class="project_specification">
+                                    <h2 class="text-primary">Project Details</h2>
+                                    <div class="row">
+                                        <div class="col-4 ">Clients:</div>
+                                        <div class="col-8 ">Jake Hemswire</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Category:</div>
+                                        <div class="col-8 ">Investment,Consulting</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Date:</div>
+                                        <div class="col-8 ">20 June, 2017</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Status:</div>
+                                        <div class="col-8 ">In Progress</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Website: </div>
+                                        <div class="col-8  text-primary">www.info@example.com</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="media-box">
-                            <div class="media-icon">
-                                <i class="fa fa-bar-chart-o"></i>
-                            </div>
-                            <div class="media-content">
-                                <a href="service-details-fullwidth.html">
-                                    <h4>Sales Coaching Training</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
-                                    labore</p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card_img">
+                            <a href="project-style-2.html">
+                                <img class="img-full" data-original="assets/img/home/gallery/g5.jpg" />
+                                <div class="hover-overlay effect-scale">
+                                    <div class="img_overlay-container">
+                                        <h4 class="img_overlay-title">Plumbing service</h4>
+                                        <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit sed do eiusmod </p>
+                                        <div class="img_overlay-icon">
+                                            <a href="assets/img/blog/g5.jpg" class="icon link quick_view"
+                                                data-fancybox="quick-view5" data-qw-form="qw-form-5"><i
+                                                    class="fa fa-search"></i></a>
+                                            <a href="project-style-2.html" class="icon link"><i
+                                                    class="fa fa-link"></i></a>
+                                            <span class="hidden">
+                                                <a class="quick_view" data-fancybox="quick-view5"
+                                                    href="assets/img/blog/g5.jpg">#2</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="qw-form-5" class="hidden">
+                            <div class="bg-image"
+                                style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
+                                <div class="project_specification">
+                                    <h2 class="text-primary">Project Details</h2>
+                                    <div class="row">
+                                        <div class="col-4 ">Clients:</div>
+                                        <div class="col-8 ">Jake Hemswire</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Category:</div>
+                                        <div class="col-8 ">Investment,Consulting</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Date:</div>
+                                        <div class="col-8 ">20 June, 2017</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Status:</div>
+                                        <div class="col-8 ">In Progress</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Website: </div>
+                                        <div class="col-8  text-primary">www.info@example.com</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="media-box">
-                            <div class="media-icon">
-                                <i class="fa fa-tripadvisor"></i>
-                            </div>
-                            <div class="media-content">
-                                <a href="service-details-left-sidebar.html">
-                                    <h4>Advisor Program</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
-                                    labore</p>
-                            </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card_img">
+                            <a href="project-style-3.html">
+                                <img class="img-full" data-original="assets/img/home/gallery/g6.jpg" />
+                                <div class="hover-overlay effect-scale">
+                                    <div class="img_overlay-container">
+                                        <h4 class="img_overlay-title">Sales Organization</h4>
+                                        <p class="img_overlay-desc">Lorem ipsum dolor sit amet, consectetur
+                                            adipisicing elit sed do eiusmod </p>
+                                        <div class="img_overlay-icon">
+                                            <a href="assets/img/home/gallery/g6.jpg" class="icon link quick_view"
+                                                data-fancybox="quick-view6" data-qw-form="qw-form-6"><i
+                                                    class="fa fa-search"></i></a>
+                                            <a href="project-style-3.html" class="icon link"><i
+                                                    class="fa fa-link"></i></a>
+                                            <span class="hidden">
+                                                <a class="quick_view" data-fancybox="quick-view6"
+                                                    href="assets/img/home/gallery/g6.jpg">#2</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="media-box">
-                            <div class="media-icon">
-                                <i class="fa fa-address-card-o"></i>
-                            </div>
-                            <div class="media-content">
-                                <a href="service-details-right-sidebar.html">
-                                    <h4>Selling With Insights</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
-                                    labore</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="media-box">
-                            <div class="media-icon">
-                                <i class="ti-ebook"></i>
-                            </div>
-                            <div class="media-content">
-                                <a href="service-details-fullwidth.html">
-                                    <h4>Consultative Training</h4>
-                                </a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
-                                    labore</p>
+                        <div id="qw-form-6" class="hidden">
+                            <div class="bg-image"
+                                style="background-image: url('assets/img/projetcs/bg-projects.jpg');">
+                                <div class="project_specification">
+                                    <h2 class="text-primary">Project Details</h2>
+                                    <div class="row">
+                                        <div class="col-4 ">Clients:</div>
+                                        <div class="col-8 ">Jake Hemswire</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Category:</div>
+                                        <div class="col-8 ">Investment,Consulting</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Date:</div>
+                                        <div class="col-8 ">20 June, 2017</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Status:</div>
+                                        <div class="col-8 ">In Progress</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 ">Website: </div>
+                                        <div class="col-8  text-primary">www.info@example.com</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="btn-container">
+                <a href="portfolio-4-column-fullwidth.html" class="btn btn-default bg-navy bold">View More</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- TESTIMONIAL SECTION -->
+    <section class="testimonial-area home-testimonial">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-6 promo-video-holder">
+                    <div class="promo-video">
+                        <img class="img-fluid" src="assets/img/home/v-poster.jpg" alt="">
+                        <a class="video-link" data-fancybox href="https://www.youtube.com/watch?v=sEl5hp8MEGs"><i
+                                class="fa fa-play play-icon" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!-- Right column -->
+                <div class="col-md-6">
+                    <div class="bg-image" style="background-image: url('assets/img/home/t-poster.jpg'); ">
+                        <div id="home-testimonial" class="">
+                            <div class="card ">
+                                <div class="card_img">
+                                    <img class="img-full" src="assets/img/home/cl1.jpg" alt="Card image">
+                                </div>
+                                <div class="card-block">
+                                    <p>Lorem ipsum dolor sit amet constur adipisicing elit, sed do eiusmtempor incid
+                                        et dolore magna aliqu enim minim veniam quis nostrud exercittion</p>
+                                    <h4 class="text-white">Julia Robertson</h4>
+                                    <span class="text-primary">Happy Client</span>
+                                </div>
+                            </div>
+                            <div class="card ">
+                                <div class="card_img">
+                                    <img class="img-full" src="assets/img/home/cl2.jpg" alt="Card image">
+                                </div>
+                                <div class="card-block">
+                                    <p>Lorem ipsum dolor sit amet constur adipisicing elit, sed do eiusmtempor incid
+                                        et dolore magna aliqu enim minim veniam quis nostrud exercittion</p>
+                                    <h4 class="text-white">Julia Robertson</h4>
+                                    <span class="text-primary">Happy Client</span>
+                                </div>
+                            </div>
+                            <div class="card ">
+                                <div class="card_img">
+                                    <img class="img-full" src="assets/img/home/cl3.jpg" alt="Card image">
+                                </div>
+                                <div class="card-block">
+                                    <p>Lorem ipsum dolor sit amet constur adipisicing elit, sed do eiusmtempor incid
+                                        et dolore magna aliqu enim minim veniam quis nostrud exercittion</p>
+                                    <h4 class="text-white">Julia Robertson</h4>
+                                    <span class="text-primary">Happy Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Right column -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="services-area">
+        <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="sectionTitle text-center">
+                        <h2>Our Services</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
+                    </div>
+                </div>
+            </div>
+            <!-- section title ends -->
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="media-box">
+                        <div class="media-icon">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <div class="media-content">
+                            <a href="service-details-left-sidebar.html">
+                                <h4>Consultative Training</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
+                                labore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media-box">
+                        <div class="media-icon">
+                            <i class="fa fa-credit-card"></i>
+                        </div>
+                        <div class="media-content">
+                            <a href="service-details-right-sidebar.html">
+                                <h4>High Performance Selling</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
+                                labore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media-box">
+                        <div class="media-icon">
+                            <i class="fa fa-bar-chart-o"></i>
+                        </div>
+                        <div class="media-content">
+                            <a href="service-details-fullwidth.html">
+                                <h4>Sales Coaching Training</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
+                                labore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media-box">
+                        <div class="media-icon">
+                            <i class="fa fa-tripadvisor"></i>
+                        </div>
+                        <div class="media-content">
+                            <a href="service-details-left-sidebar.html">
+                                <h4>Advisor Program</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
+                                labore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media-box">
+                        <div class="media-icon">
+                            <i class="fa fa-address-card-o"></i>
+                        </div>
+                        <div class="media-content">
+                            <a href="service-details-right-sidebar.html">
+                                <h4>Selling With Insights</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
+                                labore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media-box">
+                        <div class="media-icon">
+                            <i class="ti-ebook"></i>
+                        </div>
+                        <div class="media-content">
+                            <a href="service-details-fullwidth.html">
+                                <h4>Consultative Training</h4>
+                            </a>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do eiusmotempor incididunt ut
+                                labore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="home-form bg-navy" id="quote" style="padding-bottom: 1rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <h2>Get a Quote </h2>
+                    <form class="row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="exampleInputName"
+                                aria-describedby="userName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Email" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="exampleInputPhone"
+                                aria-describedby="userPhone" placeholder="Phone" required>
+                        </div>
+                        <div class="form-group col-md-6 selectOptions">
+                            <select name="topic" class="form-control select-drop">
+                                <option>Select a topic</option>
+                                <option>Topic 1</option>
+                                <option>Topic 2</option>
+                                <option>Topic 3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-default btn-dark"
+                                style="background-color: #000;">Send Request</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="promo-img">
+                        <img data-original="assets/img/home/bg-form.png" alt="promo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR TEAM -->
+    <section class="home-team">
+        <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="sectionTitle text-center">
+                        <h2>Our Professionals</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
+                    </div>
+                </div>
+            </div>
+            <!-- section title ends -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="img-full" data-original="assets/img/home/about/team1.jpg" alt="Card image">
+                            <div class="hover-overlay effect-scale">
+                                <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="page-member-details.html">
+                                <h4 class="card-title">Julia Robertson</h4>
+                            </a>
+                            <span class="">Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="card-img-top img-full" src="assets/img/home/about/team2.jpg"
+                                alt="Card image">
+                            <div class="hover-overlay effect-scale">
+                                <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="page-member-details.html">
+                                <h4 class="card-title">Charles Nicholes</h4>
+                            </a>
+                            <span class="">Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="img-full" data-original="assets/img/home/about/team3.jpg" alt="Card image">
+                            <div class="hover-overlay effect-scale">
+                                <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="page-member-details.html">
+                                <h4 class="card-title">Julia Robertson</h4>
+                            </a>
+                            <span class="">Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-style2 team-card">
+                        <div class="card_img">
+                            <img class="img-full" data-original="assets/img/home/about/team4.jpg" alt="Card image">
+                            <div class="hover-overlay effect-scale">
+                                <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
+                                <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <a href="page-member-details.html">
+                                <h4 class="card-title">Julia Robertson</h4>
+                            </a>
+                            <span class="">Co-Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BRANDS -->
+    <div class="brand_carousel bg-navy">
+        <div class="container">
+            <div class="slick_brands">
+                <div class="brand_single">
+                    <div class="brand_img">
+                        <img src="assets/img/home/about/b1.png" alt="brands">
+                    </div>
+                </div>
+                <div class="brand_single">
+                    <div class="brand_img">
+                        <img src="assets/img/home/about/b2.png" alt="brands">
+                    </div>
+                </div>
+                <div class="brand_single">
+                    <div class="brand_img">
+                        <img src="assets/img/home/about/b3.png" alt="brands">
+                    </div>
+                </div>
+                <div class="brand_single">
+                    <div class="brand_img">
+                        <img src="assets/img/home/about/b4.png" alt="brands">
+                    </div>
+                </div>
+                <div class="brand_single">
+                    <div class="brand_img">
+                        <img src="assets/img/home/about/b1.png" alt="brands">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="home-blog">
+        <div class="container">
+            <!-- section title -->
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <div class="sectionTitle text-center">
+                        <h2>Latest From Blog</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
+                    </div>
+                </div>
+            </div>
+            <!-- section title ends -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-style3">
+                        <div class="card_img">
+                            <a href="blog-singlepost-left-sidebar.html"><img class="img-full"
+                                    data-original="assets/img/blog/blog1.jpg" alt="Card image"></a>
+                            <div style="background-color: #000 !important;" class="date-holder bg-primary">
+                                <span>25</span>
+                                Feb
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> <span
+                                            class="text-primary">Admin</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 350</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 30</a>
+                                </li>
+                            </ul>
+                            <a href="blog-singlepost-left-sidebar.html">
+                                <h4 class="card-title">Finibus Bonorum Malor.</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-style3">
+                        <div class="card_img">
+                            <a href="blog-singlepost-left-sidebar.html"><img class="img-full"
+                                    data-original="assets/img/blog/blog2.jpg" alt="Card image"></a>
+                            <div style="background-color: #000 !important;" class="date-holder bg-primary">
+                                <span>25</span>
+                                Feb
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> <span
+                                            class="text-primary">Admin</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 350</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 30</a>
+                                </li>
+                            </ul>
+                            <a href="blog-singlepost-left-sidebar.html">
+                                <h4 class="card-title">Finibus Bonorum Malor.</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-style3">
+                        <div class="card_img">
+                            <a href="blog-singlepost-left-sidebar.html"><img class="img-full"
+                                    data-original="assets/img/blog/blog3.jpg" alt="Card image"></a>
+                            <div style="background-color: #000 !important;" class="date-holder bg-primary">
+                                <span>25</span>
+                                Feb
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> <span
+                                            class="text-primary">Admin</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 350</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 30</a>
+                                </li>
+                            </ul>
+                            <a href="blog-singlepost-left-sidebar.html">
+                                <h4 class="card-title">Finibus Bonorum Malor.</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="morphing-content" class="hidden">
         <!-- FORM -->
-        <section class="home-form bg-navy" id="quote" style="padding-bottom: 1rem;">
+        <section class="home-form" id="quote">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-lg-8">
-                        <h2>Get a Quote </h2>
-                        <form class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center">Get a Quote </h2>
+                        <form class="row pb30">
                             <div class="form-group col-md-6">
                                 <input type="text" class="form-control" id="exampleInputName"
                                     aria-describedby="userName" placeholder="Your Name" required>
@@ -992,472 +999,48 @@
                             </div>
                             <div class="form-group col-md-6 selectOptions">
                                 <select name="topic" class="form-control select-drop">
-                                    <option>Select a topic</option>
+                                    <option>Select a Topic</option>
                                     <option>Topic 1</option>
                                     <option>Topic 2</option>
                                     <option>Topic 3</option>
                                 </select>
                             </div>
-                            <div class="col-md-6">
-                                <button type="submit" class="btn btn-default btn-dark"
-                                    style="background-color: #000;">Send Request</button>
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-default bg-navy">Send Request</button>
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="promo-img">
-                            <img data-original="assets/img/home/bg-form.png" alt="promo">
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- OUR TEAM -->
-        <section class="home-team">
-            <div class="container">
-                <!-- section title -->
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="sectionTitle text-center">
-                            <h2>Our Professionals</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- section title ends -->
-                <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-style2 team-card">
-                            <div class="card_img">
-                                <img class="img-full" data-original="assets/img/home/about/team1.jpg" alt="Card image">
-                                <div class="hover-overlay effect-scale">
-                                    <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="page-member-details.html">
-                                    <h4 class="card-title">Julia Robertson</h4>
-                                </a>
-                                <span class="">Co-Founder</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-style2 team-card">
-                            <div class="card_img">
-                                <img class="card-img-top img-full" src="assets/img/home/about/team2.jpg"
-                                    alt="Card image">
-                                <div class="hover-overlay effect-scale">
-                                    <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="page-member-details.html">
-                                    <h4 class="card-title">Charles Nicholes</h4>
-                                </a>
-                                <span class="">Co-Founder</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-style2 team-card">
-                            <div class="card_img">
-                                <img class="img-full" data-original="assets/img/home/about/team3.jpg" alt="Card image">
-                                <div class="hover-overlay effect-scale">
-                                    <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="page-member-details.html">
-                                    <h4 class="card-title">Julia Robertson</h4>
-                                </a>
-                                <span class="">Co-Founder</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-style2 team-card">
-                            <div class="card_img">
-                                <img class="img-full" data-original="assets/img/home/about/team4.jpg" alt="Card image">
-                                <div class="hover-overlay effect-scale">
-                                    <a href="#" class="overlay_icon"><i class="fa fa-facebook-f"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="overlay_icon"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <a href="page-member-details.html">
-                                    <h4 class="card-title">Julia Robertson</h4>
-                                </a>
-                                <span class="">Co-Founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- BRANDS -->
-        <div class="brand_carousel bg-navy">
-            <div class="container">
-                <div class="slick_brands">
-                    <div class="brand_single">
-                        <div class="brand_img">
-                            <img src="assets/img/home/about/b1.png" alt="brands">
-                        </div>
-                    </div>
-                    <div class="brand_single">
-                        <div class="brand_img">
-                            <img src="assets/img/home/about/b2.png" alt="brands">
-                        </div>
-                    </div>
-                    <div class="brand_single">
-                        <div class="brand_img">
-                            <img src="assets/img/home/about/b3.png" alt="brands">
-                        </div>
-                    </div>
-                    <div class="brand_single">
-                        <div class="brand_img">
-                            <img src="assets/img/home/about/b4.png" alt="brands">
-                        </div>
-                    </div>
-                    <div class="brand_single">
-                        <div class="brand_img">
-                            <img src="assets/img/home/about/b1.png" alt="brands">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <section class="home-blog">
-            <div class="container">
-                <!-- section title -->
-                <div class="row justify-content-center">
-                    <div class="col-sm-8">
-                        <div class="sectionTitle text-center">
-                            <h2>Latest From Blog</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- section title ends -->
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card card-style3">
-                            <div class="card_img">
-                                <a href="blog-singlepost-left-sidebar.html"><img class="img-full"
-                                        data-original="assets/img/blog/blog1.jpg" alt="Card image"></a>
-                                <div style="background-color: #000 !important;" class="date-holder bg-primary">
-                                    <span>25</span>
-                                    Feb
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <ul class="list-inline">
-                                    <li>
-                                        <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> <span
-                                                class="text-primary">Admin</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 350</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 30</a>
-                                    </li>
-                                </ul>
-                                <a href="blog-singlepost-left-sidebar.html">
-                                    <h4 class="card-title">Finibus Bonorum Malor.</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-style3">
-                            <div class="card_img">
-                                <a href="blog-singlepost-left-sidebar.html"><img class="img-full"
-                                        data-original="assets/img/blog/blog2.jpg" alt="Card image"></a>
-                                <div style="background-color: #000 !important;" class="date-holder bg-primary">
-                                    <span>25</span>
-                                    Feb
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <ul class="list-inline">
-                                    <li>
-                                        <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> <span
-                                                class="text-primary">Admin</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 350</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 30</a>
-                                    </li>
-                                </ul>
-                                <a href="blog-singlepost-left-sidebar.html">
-                                    <h4 class="card-title">Finibus Bonorum Malor.</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card card-style3">
-                            <div class="card_img">
-                                <a href="blog-singlepost-left-sidebar.html"><img class="img-full"
-                                        data-original="assets/img/blog/blog3.jpg" alt="Card image"></a>
-                                <div style="background-color: #000 !important;" class="date-holder bg-primary">
-                                    <span>25</span>
-                                    Feb
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <ul class="list-inline">
-                                    <li>
-                                        <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> <span
-                                                class="text-primary">Admin</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 350</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 30</a>
-                                    </li>
-                                </ul>
-                                <a href="blog-singlepost-left-sidebar.html">
-                                    <h4 class="card-title">Finibus Bonorum Malor.</h4>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div id="morphing-content" class="hidden">
-            <!-- FORM -->
-            <section class="home-form" id="quote">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2 class="text-center">Get a Quote </h2>
-                            <form class="row pb30">
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" id="exampleInputName"
-                                        aria-describedby="userName" placeholder="Your Name" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Email" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" id="exampleInputPhone"
-                                        aria-describedby="userPhone" placeholder="Phone" required>
-                                </div>
-                                <div class="form-group col-md-6 selectOptions">
-                                    <select name="topic" class="form-control select-drop">
-                                        <option>Select a Topic</option>
-                                        <option>Topic 1</option>
-                                        <option>Topic 2</option>
-                                        <option>Topic 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-default bg-navy">Send Request</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <section class="newsletter bg-sand">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-12">
-                        <h4 class="text-center text-md-left"><span class="text-primary">Subscribe</span> <br>
-                            For Latest <span class="text-primary">Update</span></h4>
-                    </div>
-                    <div class="col-lg-9 col-12">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputName"
-                                    aria-describedby="userName" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputEmail"
-                                    aria-describedby="userEmail" placeholder="Your email" required>
-                            </div>
-                            <div class="">
-                                <button style="background-color: #000;"
-                                    class="btn btn-dark btn-default bold w-100">Subscribe</button>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="footer footer-classic" style="background-color: #000;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="footer-text">
-                            <a href="#">
-                                <img style="background-color: #000; height: 4.5rem;"
-                                    src="https://homedoot.com/public/assets/new_theme/img/logo.png" alt="" srcset="">
-                            </a>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation.
-                            </p>
-                            <div class="social-icons">
-                                <a href="#" class="btn btn-social btn-social-o twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="#" class="btn btn-social btn-social-o linkedin">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                                <a href="#" class="btn btn-social btn-social-o facebook">
-                                    <i class="fa fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="btn btn-social btn-social-o skype">
-                                    <i class="fa fa-skype"></i>
-                                </a>
-                                <a href="#" class="btn btn-social btn-social-o pinterest">
-                                    <i class="fa fa-pinterest-p"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-md-2">
-                        <div class="links">
-                            <h3>Links</h3>
-                            <ul class="">
-                                <li><a href="index-2.html">Home</a></li>
-                                <li><a href="page-aboutus.html">About Us</a></li>
-                                <li><a href="services-1.html">Services</a></li>
-                                <li><a href="portfolio-3-column.html">Portfolios</a></li>
-                                <li><a href="blog-classic-left-sidebar.html">Latest Blog</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="location">
-                            <h3>Location</h3>
-                            <ul>
-                                <li>Excepteur sint occaecat cupidat non proident sunt.</li>
-                                <li><i class="fa fa-home"></i> 1201 Park Street, Fifth Avenue,</li>
-                                <li><i class="fa fa-phone"></i> <a href="tel:[88] 657 524 332">[88] 657 524 332</a></li>
-                                <li><i class="fa fa-envelope"></i> <a href="mailto.html"> info@example.com </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="instagram">
-                            <h3>Instagram</h3>
-                            <ul class="row instagram-image">
-                                <li class="col-xs-4 col-4">
-                                    <a href="javascript:void(0)">
-                                        <img data-original="assets/img/home/footer/insta1.jpg" alt="insta">
-                                    </a>
-                                </li>
-
-                                <li class="col-xs-4 col-4">
-                                    <a href="javascript:void(0)">
-                                        <img data-original="assets/img/home/footer/insta2.jpg" alt="insta">
-                                    </a>
-                                </li>
-
-                                <li class="col-xs-4 col-4">
-                                    <a href="javascript:void(0)">
-                                        <img data-original="assets/img/home/footer/insta3.jpg" alt="insta">
-                                    </a>
-                                </li>
-
-                                <li class="col-xs-4 col-4">
-                                    <a href="javascript:void(0)">
-                                        <img data-original="assets/img/home/footer/insta4.jpg" alt="insta">
-                                    </a>
-                                </li>
-
-                                <li class="col-xs-4 col-4">
-                                    <a href="javascript:void(0)">
-                                        <img data-original="assets/img/home/footer/insta5.jpg" alt="insta">
-                                    </a>
-                                </li>
-
-                                <li class="col-xs-4 col-4">
-                                    <a href="javascript:void(0)">
-                                        <img data-original="assets/img/home/footer/insta6.jpg" alt="insta">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- BACK TO TOP BUTTON -->
-                    <!-- <a href="#pageTop" class="backToTop"><i class="fa fa-angle-up" aria-hidden="true"></i></a> -->
-
-                    <!-- COPY RIGHT -->
-                </div>
-                <div class="copyright">
-                    <hr>
-                    <div class="row justify-content-center">
-                        <div class="col-sm-6">
-                            <div class="copyRight_text text-center">
-                                <p> &copy; 2025 Copyright Homedoot.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
+    <section class="newsletter bg-sand">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-12">
+                    <h4 class="text-center text-md-left"><span class="text-primary">Subscribe</span> <br>
+                        For Latest <span class="text-primary">Update</span></h4>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputName"
+                                aria-describedby="userName" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail"
+                                aria-describedby="userEmail" placeholder="Your email" required>
+                        </div>
+                        <div class="">
+                            <button style="background-color: #000;"
+                                class="btn btn-dark btn-default bold w-100">Subscribe</button>
+                        </div>
 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- JAVASCRIPTS -->
-    <script src="assets/plugins/jquery/jquery.min.js"></script>
-    <script src="assets/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
-    <script src="assets/plugins/slick/slick.min.js"></script>
-    <script src="assets/plugins/chartjs/chart.min.js"></script>
-    <script src="assets/plugins/circle-progress/jquery.appear.js"></script>
-    <script src="assets/plugins/isotope/isotope.min.js"></script>
-    <script src="assets/plugins/lazyload/lazyload.min.js"></script>
-    <script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
-    <script src="assets/plugins/fancybox/fancyMorph.js"></script>
-    <script src="assets/plugins/counterUp/waypoint.js"></script>
-    <script src="assets/plugins/counterUp/jquery.counterup.js"></script>
-    <script src="assets/plugins/smoothscroll/smooth-scroll.polyfills.min.js"></script>
-    <script src="assets/plugins/syotimer/jquery.syotimer.min.js"></script>
-    <script src="assets/plugins/daterangepicker/js/moment.min.js"></script>
-    <script src="assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU79W1lu5f6PIiuMqNfT1C6M0e_lq1ECY"></script>
-    <script src="assets/js/biznex.js"></script>
-
-    <link href="assets/options/optionswitch.css" rel="stylesheet">
-    <script src="assets/options/optionswitcher.js"></script>
-    <script defer
-        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
-        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-        data-cf-beacon='{"rayId":"90a32f19ffcded98","version":"2025.1.0","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"6ab1814688eb46d9922ef568cb561268","b":1}'
-        crossorigin="anonymous"></script>
-</body>
-
-
-<!-- Mirrored from themes.iamabdus.com/biznex/1.3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 17:36:41 GMT -->
-
-</html>
+    <!-- FOOTER -->
+@include('include.footer')

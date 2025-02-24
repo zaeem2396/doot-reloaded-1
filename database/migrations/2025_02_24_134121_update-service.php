@@ -11,7 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::table('service', function (Blueprint $table) {
+            $table->text('content')->change();
+        });
     }
 
     /**
@@ -19,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('service', function (Blueprint $table) {
+            $table->dropColumn('content')->change();
+        });
     }
 };

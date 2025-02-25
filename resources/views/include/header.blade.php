@@ -69,6 +69,30 @@
                 height: 4.5rem;
             }
         }
+
+        @media (min-width: 992px) {
+            .fixed-servicelist {
+                position: fixed;
+                top: 25rem;
+                z-index: 1000;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* Apply only for desktop (≥992px) */
+            .service-custom-margin {
+                margin-left: 10rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* Apply only for mobile (<992px) */
+            .service-custom-margin {
+                margin-left: 0 !important;
+            }
+        }
     </style>
 </head>
 

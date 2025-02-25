@@ -15,6 +15,11 @@ class CategoryController extends Controller
         private CategoryService $categoryService
     ) {}
 
+    public function index(Request $request)
+    {
+        return view('category');
+    }
+
     public function create(Request $request)
     {
         try {
@@ -40,7 +45,7 @@ class CategoryController extends Controller
     public function get()
     {
         try {
-            $categoryResponse = $this->categoryService->getCategories();
+            $categoryResponse = $this->categoryService->getCategories()->pluck('name')->toArray();
             return $categoryResponse;
         } catch (Exception $e) {
             return $this->response->error(['message' => $e->getMessage()]);

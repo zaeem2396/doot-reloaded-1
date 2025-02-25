@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppSettingsController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,5 @@ Route::group(['prefix' => 'category'], function () {
     Route::get('get', [CategoryController::class, 'get']);
 });
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/category', [CategoryController::class, 'index']);

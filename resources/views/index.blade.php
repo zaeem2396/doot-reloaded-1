@@ -11,66 +11,19 @@
                     <h1 class="text-center mb-4">Home services at your doorstep</h1>
                     <div class="row">
                         <!-- Card Row -->
+                        @foreach ($categories['response']['data'] as $cat)
                         <div class="col-12 col-sm-6 col-md-4 mb-4">
                             <div class="card card-body text-center" style="border-radius: 20px;">
                                 <div class="text center">
                                     <img src="https://productimages.withfloats.com/serviceimages/tile/633169c534005f6cf4475d13Pest%20Control%20Service"
                                         style="height: 56px; width: 56px;" alt="" srcset="">
                                 </div>
-                                <a href="#" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">Pest
-                                    control</a>
+                                <a href="{{ url('/category?name=' . $cat['name']) }}" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">
+                                    {{ str_replace('-', ' ', $cat['name']) }}
+                                </a>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="card card-body text-center" style="border-radius: 20px;">
-                                <div class="text center">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3ck9UOXxkCICQKlSiDc_p5vkjpAf84l7Qrw&s"
-                                        style="height: 56px; width: 56px;" alt="" srcset="">
-                                </div>
-                                <a href="#" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">Cleaning
-                                    service</a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="card card-body text-center" style="border-radius: 20px;">
-                                <div class="text center">
-                                    <img src="https://www.svgrepo.com/show/105794/woman-hair-cut.svg"
-                                        style="height: 56px; width: 56px;" alt="" srcset="">
-                                </div>
-                                <a href="#" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">Women
-                                    salon at home</a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="card card-body text-center" style="border-radius: 20px;">
-                                <div class="text center">
-                                    <img src="https://cdn-icons-png.flaticon.com/512/6484/6484918.png"
-                                        style="height: 56px; width: 56px;" alt="" srcset="">
-                                </div>
-                                <a href="#" class="btn btn-sm mt-3 br--20"
-                                    style="background-color: #a91d3b;">Disinfection service</a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="card card-body text-center" style="border-radius: 20px;">
-                                <div class="text center">
-                                    <img src="https://cdn.vectopus.com/leremy/icons/56EE80358DDC/53A5136FAAF0/icons-icons-air-conditioner-air-conditioning-install-installation-technician-service-repair-stick-figure-pictogram-512.png"
-                                        style="height: 56px; width: 56px;" alt="" srcset="">
-                                </div>
-                                <a href="#" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">Ac repairs
-                                    & cleaning</a>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="card card-body text-center" style="border-radius: 20px;">
-                                <div class="text center">
-                                    <img src="https://www.svgrepo.com/show/5095/plumber.svg"
-                                        style="height: 56px; width: 56px;" alt="" srcset="">
-                                </div>
-                                <a href="#" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">Plumbing
-                                    (coming soon)</a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
 
@@ -1043,4 +996,4 @@
     </section>
 
     <!-- FOOTER -->
-@include('include.footer')
+    @include('include.footer')

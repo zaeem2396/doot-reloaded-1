@@ -21,31 +21,4 @@ class Category extends Model
         'seoDecription',
         'seoKeywords'
     ];
-
-    public static function createCategory(array $inputData)
-    {
-        try {
-            $inputData['name'] = str_replace(' ', '-', strtolower($inputData['name']));
-            $isCategoryExist = self::where('name', $inputData['name'])->exists();
-            if ($isCategoryExist) {
-                return app(Response::class)->duplicate(['message' => 'Category already exist']);
-            }
-            $isCategoryCreated = self::create($inputData);
-            if ($isCategoryCreated) {
-                return app(Response::class)->success(['message' => 'Category created successfully']);
-            }
-        } catch (Exception $e) {
-            return $e->getMessage();
-        }
-    }
-
-    public static function getCategories()
-    {
-        try {
-            $categories = self::all();
-            return $categories;
-        } catch (Exception $e) {
-            return $e->getMessage();
-        }
-    }
 }

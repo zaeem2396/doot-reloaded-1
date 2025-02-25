@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AppSettings;
+use App\Services\AppSettingsService;
 use App\Utils\Response;
 use Exception;
 use Illuminate\Http\Request;
@@ -12,7 +12,7 @@ class AppSettingsController extends Controller
 {
     public function __construct(
         private Response $response,
-        private AppSettings $appSettings
+        private AppSettingsService $appSettingsService
     ) {}
 
     public function create(Request $request)
@@ -27,7 +27,7 @@ class AppSettingsController extends Controller
             if ($validator->fails()) {
                 return $this->response->error(['message' => $validator->errors()->first()]);
             }
-            $appSettingsResponse = $this->appSettings->createAppSettings($inputData);
+            $appSettingsResponse = $this->appSettingsService->createAppSettings($inputData);
             return $appSettingsResponse;
         } catch (Exception $e) {
             return $e->getMessage();
@@ -37,7 +37,7 @@ class AppSettingsController extends Controller
     public function get()
     {
         try {
-            $appSettingsResponse = $this->appSettings->getSettings();
+            $appSettingsResponse = $this->appSettingsService->getAppSettings();
             return $appSettingsResponse;
         } catch (Exception $e) {
             return $e->getMessage();

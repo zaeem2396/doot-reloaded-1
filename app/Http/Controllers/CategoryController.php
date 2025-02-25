@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+use App\Services\CategoryService;
 use App\Utils\Response;
 use Exception;
 use Illuminate\Http\Request;
@@ -12,7 +12,7 @@ class CategoryController extends Controller
 {
     public function __construct(
         private Response $response,
-        private Category $category
+        private CategoryService $categoryService
     ) {}
 
     public function create(Request $request)
@@ -30,20 +30,20 @@ class CategoryController extends Controller
             if ($validator->fails()) {
                 return $this->response->error(['message' => $validator->errors()->first()]);
             }
-            $categoryResponse = $this->category->createCategory($inputData);
+            $categoryResponse = $this->categoryService->createCategory($inputData);
             return $categoryResponse;
         } catch (Exception $e) {
-            return $e->getMessage();
+            return $this->response->error(['message' => $e->getMessage()]);
         }
     }
 
     public function get()
     {
         try {
-            $categoryResponse = $this->category->getCategories();
+            $categoryResponse = $this->categoryService->getCategories();
             return $categoryResponse;
         } catch (Exception $e) {
-            return $e->getMessage();
+            return $this->response->error(['message' => $e->getMessage()]);
         }
     }
 }

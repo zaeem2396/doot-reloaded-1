@@ -13,6 +13,7 @@ class IndexController extends Controller
 
     public function index()
     {
+        $data['pageTitle'] = 'Homedoot';            
         $data['categories'] = $this->categoryService->getCategories()->getData(true);
         return view('index', $data);
     }

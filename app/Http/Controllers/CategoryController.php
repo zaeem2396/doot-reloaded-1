@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Services\CategoryService;
+use App\Services\SubCategoryService;
 use App\Utils\Response;
 use Exception;
 use Illuminate\Http\Request;
@@ -12,12 +14,17 @@ class CategoryController extends Controller
 {
     public function __construct(
         private Response $response,
-        private CategoryService $categoryService
+        private CategoryService $categoryService,
+        private SubCategoryService $SubCategoryService,
+        private Category $category
     ) {}
 
     public function index(Request $request)
     {
-        return view('category');
+        $data['pageTitle'] = $request->query('name');
+        $catId = $this->categoryService->getCategoryid($data['pageTitle'])->getData(true);
+        $data['services'] = $this->SubCategoryService->getSubCategories($catId['response']['data'][0]['id'])->getData(true);
+        return view('category', $data);
     }
 
     public function create(Request $request)

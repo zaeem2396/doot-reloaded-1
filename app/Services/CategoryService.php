@@ -39,4 +39,14 @@ class CategoryService
             return $this->response->error(['message' => $e->getMessage()]);
         }
     }
+
+    public function getCategoryid($name)
+    {
+        try {
+            $category = $this->categoryRepository->getCategoryid($name);
+            return $this->response->success(['data' => $category]);
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
 }

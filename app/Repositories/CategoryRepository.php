@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Collection;
 
 class CategoryRepository
 {
-
     public function __construct(
         private Category $category
     ) {}
@@ -37,5 +36,14 @@ class CategoryRepository
     public function exist(string $name): bool
     {
         return $this->category->where('name', $name)->exists();
+    }
+
+    /*
+    * Find a category by name
+    */
+
+    public function getCategoryid(string $name)
+    {
+        return $this->category->where('name', $name)->get();
     }
 }

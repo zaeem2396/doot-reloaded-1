@@ -117,6 +117,8 @@
 
 
 <!-- JAVASCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="assets/plugins/jquery/jquery.min.js"></script>
 <script src="assets/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -145,8 +147,5 @@
     data-cf-beacon='{"rayId":"90a32f19ffcded98","version":"2025.1.0","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"6ab1814688eb46d9922ef568cb561268","b":1}'
     crossorigin="anonymous"></script>
 </body>
-
-
-<!-- Mirrored from themes.iamabdus.com/biznex/1.3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 17:36:41 GMT -->
 
 </html>

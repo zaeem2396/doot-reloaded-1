@@ -8,6 +8,7 @@ use App\Services\SubCategoryService;
 use App\Utils\Response;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
@@ -23,7 +24,21 @@ class CategoryController extends Controller
     {
         $data['pageTitle'] = $request->query('name');
         $catId = $this->categoryService->getCategoryid($data['pageTitle'])->getData(true);
-        $data['services'] = $this->SubCategoryService->getSubCategories($catId['response']['data'][0]['id'])->getData(true);
+        $data['subCatServices'] = $this->SubCategoryService->getSubCategories($catId['response']['data'][0]['id'])->getData(true);
+        $data['services'] = DB::table('service')
+            ->select('service.name as service_name', 'sub_category.id as sub_category_id', 'sub_category.name as sub_category_name')
+            ->join('sub_category', 'service.subCatId', '=', 'sub_category.id')
+            ->where('service.catId', $catId['response']['data'][0]['id'])
+            ->get()
+            ->groupBy('sub_category_id')
+            ->map(function ($items) {
+                return [
+                    'sub_category_id' => $items->first()->sub_category_id,
+                    'category_name' => $items->first()->sub_category_name,
+                    'service' => $items->pluck('service_name')->toArray(),
+                ];
+            })
+            ->values();
         return view('category', $data);
     }
 

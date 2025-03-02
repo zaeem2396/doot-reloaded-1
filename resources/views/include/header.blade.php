@@ -14,26 +14,26 @@
     <title>Homedoot {{'- '.$pageTitle ?? '';}}</title>
 
     <!-- PLUGINS CSS STYLE -->
-    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/plugins/selectbox/select_option1.css" rel="stylesheet">
-    <link href="assets/plugins/slick/slick.css" rel="stylesheet" media="screen">
-    <link href="assets/plugins/slick/slick-theme.css" rel="stylesheet" media="screen">
-    <link href="assets/plugins/prismjs/prism.css" rel="stylesheet">
-    <link href="assets/plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet" />
-    <link href="assets/plugins/fancybox/fancyMorph.css" rel="stylesheet" />
-    <link href="assets/plugins/selectbox/select_option1.css" rel="stylesheet">
-    <link href="assets/plugins/thin-line-icons/css/thin-line-icons.css" rel="stylesheet">
-    <link href="assets/plugins/isotope/isotope.min.css" rel="stylesheet">
-    <link href="assets/plugins/animate/animate.css" rel="stylesheet">
-    <link href="assets/plugins/daterangepicker/css/daterangepicker.css" rel="stylesheet">
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link href="/assets/plugins/slick/slick.css" rel="stylesheet" media="screen">
+    <link href="/assets/plugins/slick/slick-theme.css" rel="stylesheet" media="screen">
+    <link href="/assets/plugins/prismjs/prism.css" rel="stylesheet">
+    <link href="/assets/plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="/assets/plugins/fancybox/fancyMorph.css" rel="stylesheet" />
+    <link href="/assets/plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link href="/assets/plugins/thin-line-icons/css/thin-line-icons.css" rel="stylesheet">
+    <link href="/assets/plugins/isotope/isotope.min.css" rel="stylesheet">
+    <link href="/assets/plugins/animate/animate.css" rel="stylesheet">
+    <link href="/assets/plugins/daterangepicker/css/daterangepicker.css" rel="stylesheet">
 
     <!-- CUSTOM CSS -->
-    <link href="assets/css/biznex.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/default.css" id="option_color">
+    <link href="/assets/css/biznex.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/default.css" id="option_color">
 
     <!-- FAVICON -->
-    <link href="assets/img/favicon.png" rel="shortcut icon">
+    <link href="/assets/img/favicon.png" rel="shortcut icon">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -149,7 +149,7 @@
                 <button class="navbar-toggler navbar-toggler-right">
                     <span class="burger-menu icon-toggle"><i class="fa fa-bars"></i></span>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img class="responsive-logo" src="https://homedoot.com/public/assets/new_theme/img/logo.png" alt=""
                         srcset="">
                     <!-- Image Logo - if you want to use jpg or png format -->
@@ -159,7 +159,7 @@
                 <div class="navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html"><span class="sr-only">(current)</span>Home</a>
+                            <a class="nav-link" href="/"><span class="sr-only">(current)</span>Home</a>
                         </li>
                         <li class="nav-item dropdown drop_single ">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
@@ -176,7 +176,7 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown drop_single ">
+                        <li class="nav-item dropdown drop_single d-none">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Services</a>
                             <ul class="dropdown-menu dd_first">
@@ -186,6 +186,17 @@
                                 <li><a href="service-details-left-sidebar.html">Service Details Left Sidebar</a></li>
                                 <li><a href="service-details-right-sidebar.html">Service Details Right Sidebar</a></li>
                                 <li><a href="service-details-fullwidth.html">Service Details Fullwidth</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Service list -->
+                        <li class="nav-item dropdown drop_single">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Services</a>
+                            <ul class="dropdown-menu dd_first">
+                                @foreach ($subCategories['response']['data'] as $sc)
+                                <li><a href="/service/{{$sc['name']}}">{{str_replace('-', ' ', $sc['name'])}}</a></li>
+                                @endforeach
                             </ul>
                         </li>
 

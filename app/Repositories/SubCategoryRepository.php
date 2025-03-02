@@ -46,4 +46,13 @@ class SubCategoryRepository
     {
         return $this->subCategory->where('catId', $catId)->get();
     }
+
+    /*
+    * Find a sub category ID by name
+    */
+
+    public function getSubCategoryid(string $name)
+    {
+        return $this->subCategory->where('name', $name)->get();
+    }
 }

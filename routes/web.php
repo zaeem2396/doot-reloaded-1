@@ -29,4 +29,4 @@ Route::group(['prefix' => 'category'], function () {
 });
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/service/{name}', [CategoryController::class, 'index']);

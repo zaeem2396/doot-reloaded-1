@@ -18,7 +18,7 @@
                                     <img src="https://productimages.withfloats.com/serviceimages/tile/633169c534005f6cf4475d13Pest%20Control%20Service"
                                         style="height: 56px; width: 56px;" alt="" srcset="">
                                 </div>
-                                <a href="{{ url('/category?name=' . $cat['name']) }}" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">
+                                <a href="/service/{{$cat['name']}}" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">
                                     {{ str_replace('-', ' ', $cat['name']) }}
                                 </a>
                             </div>

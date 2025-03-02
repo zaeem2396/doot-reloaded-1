@@ -8,7 +8,7 @@
             <div class="row justify-content-center mb-4">
                 <div class="col-md-12">
                     <div class="sectionTitle text-center">
-                        <h1>Cleaning services</h1>
+                        <h1>{{ucfirst(str_replace('-', ' ', $pageTitle))}}</h1>
                         <hr class="">
                         <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p> -->
                     </div>
@@ -25,11 +25,11 @@
                             </div>
 
                             <div class="row mt-2">
-                                @foreach ($subCatServices['response']['data'] as $subCatService)
+                                @foreach ($services[0]['service'] as $service)
                                 <div class="col-4 text-center">
-                                    <a class="scroll-to-service" data-target="#{{ Str::slug($subCatService['name']) }}" href="javascript:void(0)">
+                                    <a class="scroll-to-service" data-target="#{{ Str::slug($service) }}" href="javascript:void(0)">
                                         <img src="https://placehold.co/50" class="img-fluid" alt="Icon 1">
-                                        <p style="font-size: small;" class="mt-2 text-dark">{{ucfirst(str_replace('-', ' ',$subCatService['name']))}}</p>
+                                        <p style="font-size: small;" class="mt-2 text-dark">{{ucfirst(str_replace('-', ' ',$service))}}</p>
                                     </a>
                                 </div>
                                 @endforeach
@@ -43,12 +43,12 @@
                         @foreach ($services as $subCategory)
                         <!-- Sub-Category Title -->
                         <div class="col-12">
-                            <h3 class="mb-3">{{ ucwords(str_replace('-', ' ', $subCategory['category_name'])) }}</h3>
+                            <!-- <h3 class="mb-3">{{ ucwords(str_replace('-', ' ', $subCategory['category_name'])) }}</h3> -->
                         </div>
 
                         @foreach ($subCategory['service'] as $service)
                         <!-- Service Card -->
-                        <div class="col-12" id="{{ Str::slug($subCategory['category_name']) }}">
+                        <div class="col-12" id="{{ Str::slug($service) }}">
                             <div class="card h-100 d-flex flex-row align-items-center position-relative">
                                 <div class="card-body" style="width: 60%;">
                                     <a href="javascript:void(0)">

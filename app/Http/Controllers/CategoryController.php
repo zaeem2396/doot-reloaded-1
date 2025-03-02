@@ -16,29 +16,17 @@ class CategoryController extends Controller
     public function __construct(
         private Response $response,
         private CategoryService $categoryService,
-        private SubCategoryService $SubCategoryService,
+        private SubCategoryService $subCategoryService,
         private Category $category
     ) {}
 
     public function index(Request $request)
     {
-        $data['pageTitle'] = $request->query('name');
-        $catId = $this->categoryService->getCategoryid($data['pageTitle'])->getData(true);
-        $data['subCatServices'] = $this->SubCategoryService->getSubCategories($catId['response']['data'][0]['id'])->getData(true);
-        $data['services'] = DB::table('service')
-            ->select('service.name as service_name', 'sub_category.id as sub_category_id', 'sub_category.name as sub_category_name')
-            ->join('sub_category', 'service.subCatId', '=', 'sub_category.id')
-            ->where('service.catId', $catId['response']['data'][0]['id'])
-            ->get()
-            ->groupBy('sub_category_id')
-            ->map(function ($items) {
-                return [
-                    'sub_category_id' => $items->first()->sub_category_id,
-                    'category_name' => $items->first()->sub_category_name,
-                    'service' => $items->pluck('service_name')->toArray(),
-                ];
-            })
-            ->values();
+        $data['pageTitle'] = $request->segment(2);
+        $catId = $this->subCategoryService->getSubCategoryid($data['pageTitle'])->getData(true);
+        $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
+        /* move this to repository and service approach */
+        $data['services'] = $this->subCategoryService->getServicesGroupedBySubCategory($catId['response']['data'][0]['id']);
         return view('category', $data);
     }
 

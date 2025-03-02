@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Repositories\SubCategoryRepository;
 use App\Utils\Response;
 use Exception;
+use Illuminate\Support\Facades\DB;
 
 class SubCategoryService
 {
@@ -30,11 +31,50 @@ class SubCategoryService
         }
     }
 
-    public function getSubCategories($catId)
+    public function getSubCategories($catId = null)
     {
         try {
-            $subCategories = $this->subCategoryRepository->findByCatId($catId);
+            if (isset($catId)) {
+                $subCategories = $this->subCategoryRepository->findByCatId($catId);
+                return $this->response->success(['data' => $subCategories]);
+            }
+            $subCategories = $this->subCategoryRepository->all();
             return $this->response->success(['data' => $subCategories]);
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
+
+    public function getSubCategoryid($name)
+    {
+        try {
+            $subCategory = $this->subCategoryRepository->getSubCategoryid($name);
+            return $this->response->success(['data' => $subCategory]);
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
+
+    public function getServicesGroupedBySubCategory($categoryId)
+    {
+        try {
+            return DB::table('service')
+                ->select(
+                    'service.name as service_name',
+                    'sub_category.id as sub_category_id',
+                    'sub_category.name as sub_category_name'
+                )
+                ->join('sub_category', 'service.subCatId', '=', 'sub_category.id')
+                ->where('service.subCatId', $categoryId)
+                ->orderBy('sub_category.id') // Ensure consistent grouping
+                ->get()
+                ->groupBy('sub_category_id')
+                ->map(fn($items) => [
+                    'sub_category_id' => $items[0]->sub_category_id, // Access first item directly
+                    'category_name' => $items[0]->sub_category_name,
+                    'service' => $items->pluck('service_name')->all(), // `all()` avoids unnecessary array conversion
+                ])
+                ->values();
         } catch (Exception $e) {
             return $this->response->error(['message' => $e->getMessage()]);
         }

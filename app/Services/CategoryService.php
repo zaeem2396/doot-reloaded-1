@@ -10,7 +10,7 @@ class CategoryService
 {
     public function __construct(
         private CategoryRepository $categoryRepository,
-        private Response $response
+        private Response $response,
     ) {}
 
     public function createCategory(array $inputData)

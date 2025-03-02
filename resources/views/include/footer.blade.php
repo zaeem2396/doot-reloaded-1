@@ -119,28 +119,28 @@
 <!-- JAVASCRIPTS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="assets/plugins/jquery/jquery.min.js"></script>
-<script src="assets/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
-<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
-<script src="assets/plugins/slick/slick.min.js"></script>
-<script src="assets/plugins/chartjs/chart.min.js"></script>
-<script src="assets/plugins/circle-progress/jquery.appear.js"></script>
-<script src="assets/plugins/isotope/isotope.min.js"></script>
-<script src="assets/plugins/lazyload/lazyload.min.js"></script>
-<script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
-<script src="assets/plugins/fancybox/fancyMorph.js"></script>
-<script src="assets/plugins/counterUp/waypoint.js"></script>
-<script src="assets/plugins/counterUp/jquery.counterup.js"></script>
-<script src="assets/plugins/smoothscroll/smooth-scroll.polyfills.min.js"></script>
-<script src="assets/plugins/syotimer/jquery.syotimer.min.js"></script>
-<script src="assets/plugins/daterangepicker/js/moment.min.js"></script>
-<script src="assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
+<script src="/assets/plugins/jquery/jquery.min.js"></script>
+<script src="/assets/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+<script src="/assets/plugins/slick/slick.min.js"></script>
+<script src="/assets/plugins/chartjs/chart.min.js"></script>
+<script src="/assets/plugins/circle-progress/jquery.appear.js"></script>
+<script src="/assets/plugins/isotope/isotope.min.js"></script>
+<script src="/assets/plugins/lazyload/lazyload.min.js"></script>
+<script src="/assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="/assets/plugins/fancybox/fancyMorph.js"></script>
+<script src="/assets/plugins/counterUp/waypoint.js"></script>
+<script src="/assets/plugins/counterUp/jquery.counterup.js"></script>
+<script src="/assets/plugins/smoothscroll/smooth-scroll.polyfills.min.js"></script>
+<script src="/assets/plugins/syotimer/jquery.syotimer.min.js"></script>
+<script src="/assets/plugins/daterangepicker/js/moment.min.js"></script>
+<script src="/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU79W1lu5f6PIiuMqNfT1C6M0e_lq1ECY"></script>
-<script src="assets/js/biznex.js"></script>
+<script src="/assets/js/biznex.js"></script>
 
-<link href="assets/options/optionswitch.css" rel="stylesheet">
-<script src="assets/options/optionswitcher.js"></script>
+<link href="/assets/options/optionswitch.css" rel="stylesheet">
+<script src="/assets/options/optionswitcher.js"></script>
 <script defer
     src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="

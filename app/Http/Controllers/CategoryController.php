@@ -25,7 +25,6 @@ class CategoryController extends Controller
         $data['pageTitle'] = $request->segment(2);
         $catId = $this->subCategoryService->getSubCategoryid($data['pageTitle'])->getData(true);
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
-        /* move this to repository and service approach */
         $data['services'] = $this->subCategoryService->getServicesGroupedBySubCategory($catId['response']['data'][0]['id']);
         return view('category', $data);
     }

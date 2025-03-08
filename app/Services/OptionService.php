@@ -42,4 +42,17 @@ class OptionService
             return $this->response->error(['message' => $e->getMessage()]);
         }
     }
+
+    public function getOptionsOnCatIdSubCatIdOptionId(array $inputData)
+    {
+        try {
+            if (!isset($inputData['catId'], $inputData['subCatId'])) {
+                return $this->response->error(['message' => 'Invalid input data']);
+            }
+            $options = $this->optionServiceRepository->getServiceOptionsOnCatIdSubCatIdOptionId($inputData);
+            return $this->response->success(['data' => $options]);
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
 }

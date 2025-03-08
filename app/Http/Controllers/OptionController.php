@@ -28,4 +28,22 @@ class OptionController extends Controller
             return $this->response->error(['message' => $e->getMessage()]);
         }
     }
+
+    public function showOptions(Request $request)
+    {
+        try {
+            $optionId = $request->query('optionId');
+            $catId = $request->query('catId');
+            $subCatId = $request->query('subCatId');
+            $data['serviceName'] = str_replace('-', ' ', $request->query('service_name'));
+            $data['serviceOptions'] = $this->optionService->getOptionsOnCatIdSubCatIdOptionId([
+                'catId' => $catId,
+                'subCatId' => $subCatId,
+                'optionId' => $optionId,
+            ]);
+            return $data;
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
 }

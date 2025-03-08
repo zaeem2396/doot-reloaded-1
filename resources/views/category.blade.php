@@ -144,10 +144,10 @@
                         <img src="${service.img ? service.img : 'https://via.placeholder.com/150'}"
                             alt="${service.name}" class="img-fluid rounded" style="height: 130px; object-fit: cover;">
 
-                        <button type="button" class="btn service-br bg-dark text-white position-absolute w-25"
+                        <a href="/options?service_name=${service.name}&optionId=${service.id}&catId=${catId}&subCatId=${subCatId}" class="btn service-br bg-dark text-white position-absolute w-25"
                             style="top: 80%; left: 50%; transform: translate(-50%, -50%);">
                             Book Now
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <hr>`;

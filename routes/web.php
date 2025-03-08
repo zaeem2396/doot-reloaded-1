@@ -35,6 +35,7 @@ Route::group(['prefix' => 'category'], function () {
 Route::group(['prefix' => 'options'], function () {
     Route::post('create', [OptionController::class, 'create']);
     Route::get('get/{catId}/{subCatId}/{serviceId}', [OptionController::class, 'get']);
+    Route::get('/', [OptionController::class, 'showOptions'])->name('options.show');
 });
 
 Route::get('/', [IndexController::class, 'index']);

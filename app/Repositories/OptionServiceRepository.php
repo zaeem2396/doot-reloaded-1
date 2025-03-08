@@ -3,12 +3,14 @@
 namespace App\Repositories;
 
 use App\Models\Options;
+use App\Models\ServiceOptions;
 use Illuminate\Database\Eloquent\Collection;
 
 class OptionServiceRepository
 {
     public function __construct(
-        private Options $options
+        private Options $options,
+        private ServiceOptions $serviceOptions
     ) {}
 
     /*
@@ -55,6 +57,18 @@ class OptionServiceRepository
         return $this->options->where('catId', $inputData['catId'])
             ->where('subCatId', $inputData['subCatId'])
             ->where('serviceId', $inputData['serviceId'])
+            ->get();
+    }
+
+    /*
+    * Find a Service option by option id category id and sub category id
+    */
+
+    public function getServiceOptionsOnCatIdSubCatIdOptionId(array $inputData)
+    {
+        return $this->serviceOptions->where('catId', $inputData['catId'])
+            ->where('subCatId', $inputData['subCatId'])
+            ->where('optionId', $inputData['optionId'])
             ->get();
     }
 }

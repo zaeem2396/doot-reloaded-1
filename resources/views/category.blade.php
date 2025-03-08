@@ -133,11 +133,10 @@
                     modalContent += `
                 <div class="row mb-3">
                     <!-- Left Side: Title & Content -->
-                    <div class="col-md-6">
-                        <h5 class="font-weight-bold">${service.name}</h5>
+                    <div class="col-md-6 mt-4">
+                        <h5 class="font-weight-bold">${service.name.replace(/-/g, " ").toUpperCase()}</h5>
                         <p>${service.content}</p>
                         <p>Price: <b>${service.price}</b></p>
-                        <button class="btn service-br bg-dark text-white">Book</button>
                     </div>
 
                     <!-- Right Side: Image & Button -->
@@ -145,7 +144,7 @@
                         <img src="${service.img ? service.img : 'https://via.placeholder.com/150'}"
                             alt="${service.name}" class="img-fluid rounded" style="height: 130px; object-fit: cover;">
 
-                        <button type="button" class="btn btn-sm btn-primary position-absolute w-50"
+                        <button type="button" class="btn service-br bg-dark text-white position-absolute w-25"
                             style="top: 80%; left: 50%; transform: translate(-50%, -50%);">
                             Book Now
                         </button>
@@ -165,4 +164,16 @@
                 document.getElementById("modalBody").innerHTML = "<p>Error fetching services.</p>";
             }
         };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const serviceModal = document.getElementById("serviceModal");
+
+            serviceModal.addEventListener("hidden.bs.modal", function() {
+                document.body.classList.remove("modal-open"); // Removes extra padding
+                let backdrops = document.getElementsByClassName("modal-backdrop");
+                while (backdrops[0]) {
+                    backdrops[0].parentNode.removeChild(backdrops[0]); // Remove backdrop manually
+                }
+            });
+        });
     </script>

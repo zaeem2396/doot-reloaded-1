@@ -8,7 +8,6 @@ use App\Services\SubCategoryService;
 use App\Utils\Response;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
@@ -23,9 +22,11 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $data['pageTitle'] = $request->segment(2);
-        $catId = $this->subCategoryService->getSubCategoryid($data['pageTitle'])->getData(true);
+        $data['catId'] = $this->subCategoryService->getSubCategoryid($data['pageTitle'])->getData(true);
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
-        $data['services'] = $this->subCategoryService->getServicesGroupedBySubCategory($catId['response']['data'][0]['id']);
+        $data['services'] = $this->subCategoryService->getServicesGroupedBySubCategory($data['catId']['response']['data'][0]['id']);
+        // echo "<pre>";
+        // print_r($data['services']);exit;
         return view('category', $data);
     }
 

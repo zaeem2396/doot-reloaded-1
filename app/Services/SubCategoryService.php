@@ -61,6 +61,8 @@ class SubCategoryService
             return DB::table('service')
                 ->select(
                     'service.name as service_name',
+                    'service.id as service_id',
+                    'service.catId as catId',
                     'sub_category.id as sub_category_id',
                     'sub_category.name as sub_category_name'
                 )
@@ -70,9 +72,13 @@ class SubCategoryService
                 ->get()
                 ->groupBy('sub_category_id')
                 ->map(fn($items) => [
+                    'category_id' => $items[0]->catId,
                     'sub_category_id' => $items[0]->sub_category_id, // Access first item directly
                     'category_name' => $items[0]->sub_category_name,
-                    'service' => $items->pluck('service_name')->all(), // `all()` avoids unnecessary array conversion
+                    'service' => $items->map(fn($item) => [
+                        'service_id' => $item->service_id,
+                        'service_name' => $item->service_name
+                    ])->values()->all(),
                 ])
                 ->values();
         } catch (Exception $e) {

@@ -28,7 +28,6 @@
     <link href="/assets/plugins/isotope/isotope.min.css" rel="stylesheet">
     <link href="/assets/plugins/animate/animate.css" rel="stylesheet">
     <link href="/assets/plugins/daterangepicker/css/daterangepicker.css" rel="stylesheet">
-
     <!-- CUSTOM CSS -->
     <link href="/assets/css/biznex.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/default.css" id="option_color">
@@ -85,6 +84,49 @@
             /* Apply only for mobile (<992px) */
             .service-custom-margin {
                 margin-left: 0 !important;
+            }
+        }
+
+        /* Modal Dialog */
+        .modal-dialog {
+            max-width: 90%;
+            /* Adjust width for responsiveness */
+            margin: 5rem auto;
+            /* Centers modal */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            max-height: 90vh;
+            /* Keeps modal within viewport */
+            overflow: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+        /* Modal Body - Scrollable Vertically */
+        .modal-body {
+            max-height: 400px;
+            /* Limit modal height */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+            overflow-x: hidden;
+            /* Hide horizontal scrolling */
+        }
+
+        /* Adjustments for Smaller Screens */
+        @media (max-width: 576px) {
+
+            /* Targets mobile devices */
+            .modal-dialog {
+                max-width: 95%;
+                /* Slightly wider on small screens */
+                margin: 3rem auto;
+                /* Adjust position */
+            }
+
+            .modal-body {
+                max-height: 300px;
+                /* Reduce height for smaller screens */
             }
         }
     </style>

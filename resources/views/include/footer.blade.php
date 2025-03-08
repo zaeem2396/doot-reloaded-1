@@ -138,7 +138,7 @@
 <script src="/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU79W1lu5f6PIiuMqNfT1C6M0e_lq1ECY"></script>
 <script src="/assets/js/biznex.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <link href="/assets/options/optionswitch.css" rel="stylesheet">
 <script src="/assets/options/optionswitcher.js"></script>
 <script defer
@@ -146,6 +146,7 @@
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
     data-cf-beacon='{"rayId":"90a32f19ffcded98","version":"2025.1.0","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"6ab1814688eb46d9922ef568cb561268","b":1}'
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"></script>
 </body>
 
 </html>

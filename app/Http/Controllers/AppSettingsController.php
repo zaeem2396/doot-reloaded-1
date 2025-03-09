@@ -17,7 +17,6 @@ class AppSettingsController extends Controller
 
     public function create(Request $request)
     {
-        echo "in";exit;
         try {
             $inputData = $request->only('name', 'value');
             $validator = Validator::make($inputData, [

@@ -15,7 +15,9 @@ class IndexController extends Controller
 
     public function index()
     {
-        $data['pageTitle'] = 'Homedoot';            
+        $data['pageTitle'] = 'Cleaning Services in Mumbai, Deep Cleaning Expert - Home Doot';
+        $data['seoDescription'] = 'Discover expert Cleaning Services in Mumbai, Thane & Navi Mumbai by Home Doot. Get our reliable Cleaning Services,AC Services & Pest Control tailored to your needs.';
+        $data['seoKeywords'] = 'cleaning services mumbai, koken hand sockets';
         $data['categories'] = $this->categoryService->getCategories()->getData(true);
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
         return view('index', $data);

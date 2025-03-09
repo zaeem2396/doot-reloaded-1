@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homedoot {{'- '.$pageTitle ?? '';}}</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>{{$pageTitle ?? ''}}</title>
+    <meta name="description" content="{{$seoDescription ?? ''}}">
+    <meta name="keywords" content="{{$seoKeywords ?? ''}}">
     <!-- PLUGINS CSS STYLE -->
     <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/assets/css/default.css" id="option_color">
 
     <!-- FAVICON -->
-    <link href="/assets/img/favicon.png" rel="shortcut icon">
+    <link href="/assets/favicon.png" rel="shortcut icon">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -153,15 +153,11 @@
                 <div class="col-sm-9">
                     <div class="topbar-content">
                         <i class="fa fa-phone" aria-hidden="true"></i>
-                        <a href="tel:+251-235-3256">+251-235-3256</a>
+                        <a href="tel:{{getAppSettings()['original']['response']['data']['contactMobile']}}">{{getAppSettings()['original']['response']['data']['contactMobile']}}</a>
                     </div>
                     <div class="topbar-content">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:info@example.com ">info@example.com</a>
-                    </div>
-                    <div class="topbar-content">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p>New York, USA</p>
+                        <a href="mailto: {{getAppSettings()['original']['response']['data']['supportEmail']}}"> {{getAppSettings()['original']['response']['data']['supportEmail']}} </a>
                     </div>
                 </div>
                 <div class="col-sm-3 text-right d-none">

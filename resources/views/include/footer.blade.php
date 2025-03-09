@@ -11,23 +11,6 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation.
                     </p>
-                    <div class="social-icons">
-                        <a href="#" class="btn btn-social btn-social-o twitter">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="btn btn-social btn-social-o linkedin">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="btn btn-social btn-social-o facebook">
-                            <i class="fa fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="btn btn-social btn-social-o skype">
-                            <i class="fa fa-skype"></i>
-                        </a>
-                        <a href="#" class="btn btn-social btn-social-o pinterest">
-                            <i class="fa fa-pinterest-p"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="col-xl-2 col-md-2">

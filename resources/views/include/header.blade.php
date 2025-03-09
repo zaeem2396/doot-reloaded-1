@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from themes.iamabdus.com/biznex/1.3/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 17:31:09 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
 <head>
-
     <!-- SITE TITTLE -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -194,10 +189,14 @@
 
                 <div class="navbar-collapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="/"><span class="sr-only">(current)</span>Home</a>
                         </li>
-                        <li class="nav-item dropdown drop_single ">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about-us">About us</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown drop_single ">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Pages</a>
                             <ul class="dropdown-menu dd_first">
@@ -210,7 +209,7 @@
                                 <li><a href="404.html">404 page</a></li>
                                 <li><a href="page-comingsoon.html">Coming Soon</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
                         <li class="nav-item dropdown drop_single d-none">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"

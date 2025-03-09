@@ -20,4 +20,12 @@ class IndexController extends Controller
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
         return view('index', $data);
     }
+
+    public function aboutUs()
+    {
+        $data['pageTitle'] = 'About Us';            
+        $data['categories'] = $this->categoryService->getCategories()->getData(true);
+        $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
+        return view('aboutUs', $data);
+    }
 }

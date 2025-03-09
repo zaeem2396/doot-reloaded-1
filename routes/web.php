@@ -39,4 +39,5 @@ Route::group(['prefix' => 'options'], function () {
 });
 
 Route::get('/', [IndexController::class, 'index']);
+Route::get('/about-us', [IndexController::class, 'aboutUs']);   
 Route::get('/service/{name}', [CategoryController::class, 'index']);

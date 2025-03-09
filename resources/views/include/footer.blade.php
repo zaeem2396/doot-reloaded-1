@@ -46,50 +46,43 @@
                 <div class="location">
                     <h3>Location</h3>
                     <ul>
-                        <li>Excepteur sint occaecat cupidat non proident sunt.</li>
-                        <li><i class="fa fa-home"></i> 1201 Park Street, Fifth Avenue,</li>
-                        <li><i class="fa fa-phone"></i> <a href="tel:[88] 657 524 332">[88] 657 524 332</a></li>
-                        <li><i class="fa fa-envelope"></i> <a href="mailto.html"> info@example.com </a></li>
+                        <li><i class="fa fa-home"></i> {{getAppSettings()['original']['response']['data']['address']}}</li>
+                        <li><i class="fa fa-phone"></i> <a href="tel:{{getAppSettings()['original']['response']['data']['contactMobile']}}">{{getAppSettings()['original']['response']['data']['contactMobile']}}</a></li>
+                        <li><i class="fa fa-envelope"></i> <a href="mailto: {{getAppSettings()['original']['response']['data']['supportEmail']}}"> {{getAppSettings()['original']['response']['data']['supportEmail']}} </a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="instagram">
-                    <h3>Instagram</h3>
+                    <h3>Social links</h3>
                     <ul class="row instagram-image">
                         <li class="col-xs-4 col-4">
-                            <a href="javascript:void(0)">
-                                <img data-original="assets/img/home/footer/insta1.jpg" alt="insta">
+                            <a href="{{getAppSettings()['original']['response']['data']['facebookUrl']}}">
+                                <span class="fa fa-facebook text-white" style="font-size: 20px;"></span>
                             </a>
                         </li>
 
                         <li class="col-xs-4 col-4">
-                            <a href="javascript:void(0)">
-                                <img data-original="assets/img/home/footer/insta2.jpg" alt="insta">
+                            <a href="{{getAppSettings()['original']['response']['data']['xUrl']}}">
+                                <span class="fa fa-twitter text-white" style="font-size: 20px;"></span>
                             </a>
                         </li>
 
                         <li class="col-xs-4 col-4">
-                            <a href="javascript:void(0)">
-                                <img data-original="assets/img/home/footer/insta3.jpg" alt="insta">
+                            <a href="{{getAppSettings()['original']['response']['data']['linkedInUrl']}}">
+                                <span class="fa fa-linkedin text-white" style="font-size: 20px;"></span>
                             </a>
                         </li>
 
-                        <li class="col-xs-4 col-4">
-                            <a href="javascript:void(0)">
-                                <img data-original="assets/img/home/footer/insta4.jpg" alt="insta">
+                        <li class="col-xs-4 col-4 mt-3">
+                            <a href="{{getAppSettings()['original']['response']['data']['instagramUrl']}}">
+                                <span class="fa fa-instagram text-white" style="font-size: 20px;"></span>
                             </a>
                         </li>
 
-                        <li class="col-xs-4 col-4">
-                            <a href="javascript:void(0)">
-                                <img data-original="assets/img/home/footer/insta5.jpg" alt="insta">
-                            </a>
-                        </li>
-
-                        <li class="col-xs-4 col-4">
-                            <a href="javascript:void(0)">
-                                <img data-original="assets/img/home/footer/insta6.jpg" alt="insta">
+                        <li class="col-xs-4 col-4 mt-3">
+                            <a href="{{getAppSettings()['original']['response']['data']['youtubeUrl']}}">
+                                <span class="fa fa-youtube text-white" style="font-size: 20px;"></span>
                             </a>
                         </li>
                     </ul>
@@ -146,7 +139,7 @@
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
     data-cf-beacon='{"rayId":"90a32f19ffcded98","version":"2025.1.0","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"6ab1814688eb46d9922ef568cb561268","b":1}'
     crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"></script>
 </body>
 
 </html>

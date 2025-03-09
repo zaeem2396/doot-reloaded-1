@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\OptionService;
+use App\Services\SubCategoryService;
 use App\Utils\Response;
 use Exception;
 use Illuminate\Http\Request;
@@ -11,7 +12,8 @@ class OptionController extends Controller
 {
     public function __construct(
         private Response $response,
-        private OptionService $optionService
+        private OptionService $optionService,
+        private SubCategoryService $subCategoryService
     ) {}
 
     public function get($catId, $subCatId, $serviceId)
@@ -35,13 +37,16 @@ class OptionController extends Controller
             $optionId = $request->query('optionId');
             $catId = $request->query('catId');
             $subCatId = $request->query('subCatId');
+            $data['pageTitle'] = 'Homedoot';
+            $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
             $data['serviceName'] = str_replace('-', ' ', $request->query('service_name'));
-            $data['serviceOptions'] = $this->optionService->getOptionsOnCatIdSubCatIdOptionId([
+            $serviceOptionsResponse = $this->optionService->getOptionsOnCatIdSubCatIdOptionId([
                 'catId' => $catId,
                 'subCatId' => $subCatId,
                 'optionId' => $optionId,
             ]);
-            return $data;
+            $data['serviceOptions'] = json_decode(json_encode($serviceOptionsResponse), true);
+            return view('options', $data);
         } catch (Exception $e) {
             return $this->response->error(['message' => $e->getMessage()]);
         }

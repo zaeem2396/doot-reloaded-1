@@ -8,10 +8,8 @@
             <div class="row justify-content-center mb-4">
                 <div class="col-md-12">
                     <div class="sectionTitle text-center">
-                        <h1 class="text-capitalize">{{$serviceName}}</h1>
+                        <h1 class="text-capitalize">{{$serviceName }}</h1>
                         <hr class="">
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p> -->
-                    </div>
                 </div>
             </div>
             <!-- section title ends -->
@@ -44,6 +42,7 @@
                                 </div>
                             </div>
                         </div>
+                        <hr style="flex-grow: 1; margin-left: 10px; border-top: 1px solid #d9d9d9;">
                         @endforeach
                     </div>
                 </div>

@@ -67,6 +67,7 @@
                                 </div>
                             </div>
                         </div>
+                        <hr style="flex-grow: 1; margin-left: 10px; border-top: 1px solid #d9d9d9;">
                         @endforeach
                         @endforeach
                     </div>

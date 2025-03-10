@@ -21,12 +21,10 @@ class CategoryController extends Controller
 
     public function index(Request $request)
     {
-        $data['pageTitle'] = $request->segment(2);
-        $data['catId'] = $this->subCategoryService->getSubCategoryid($data['pageTitle'])->getData(true);
+        $data['pageTitle'] = ucfirst(str_replace('-', ' ', $request->segment(2)));
+        $data['catId'] = $this->subCategoryService->getSubCategoryid($request->segment(2))->getData(true);
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
         $data['services'] = $this->subCategoryService->getServicesGroupedBySubCategory($data['catId']['response']['data'][0]['id']);
-        // echo "<pre>";
-        // print_r($data['services']);exit;
         return view('category', $data);
     }
 

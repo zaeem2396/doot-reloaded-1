@@ -123,7 +123,7 @@
                 const serviceId = e.getAttribute("data-service-id");
 
                 const response = await axios.get(`/options/get/${catId}/${subCatId}/${serviceId}`);
-                console.log(response.data.response);
+                console.log(response.data.response.data);
                 if (response.data.response.length === 0) {
                     document.getElementById("modalBody").innerHTML = "<p>No services available.</p>";
                     return;

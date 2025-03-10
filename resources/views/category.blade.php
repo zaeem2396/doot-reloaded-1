@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card service-br" style="border: 1px solid #d9d9d9;">
-                        <div class="card-body" style="height: 300px; overflow: hidden;">
+                        <div class="card-body" style="height: 340px; overflow: hidden;">
                             <div style="display: flex; align-items: center;">
                                 <span class="card-title p-0">Select a service</span>
                                 <hr style="flex-grow: 1; margin-left: 10px; border-top: 1px solid #d9d9d9;">
@@ -28,7 +28,7 @@
                                 @foreach ($services[0]['service'] as $service)
                                 <div class="col-4 text-center">
                                     <a class="scroll-to-service" data-target="#{{ Str::slug($service['service_name']) }}" href="javascript:void(0)">
-                                        <img src="https://placehold.co/50" class="img-fluid" alt="Icon 1">
+                                        <img style="height: 100px; width: 130px;" src="{{$service['service_img']}}" class="img-fluid" alt="Icon 1">
                                         <p style="font-size: small;" class="mt-2 text-dark">{{ucfirst(str_replace('-', ' ',$service['service_name']))}}</p>
                                     </a>
                                 </div>
@@ -57,7 +57,7 @@
                                         class="btn service-br btn-sm bg-dark text-white" data-bs-toggle="modal" data-bs-target="#serviceModal">Read more</a>
                                 </div>
                                 <div class="card-img position-relative" style="width: 40%;">
-                                    <img src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg"
+                                    <img src="{{$service['service_img']}}"
                                         alt="Service Image" class="img-fluid service-br rounded"
                                         style="width: 150px; height: 100px; object-fit: cover;">
                                     <button data-service-id="{{$service['service_id']}}" onclick="fetchOptions(this);" type="button" class="btn btn-primary position-absolute" data-bs-toggle="modal" data-bs-target="#serviceModal"
@@ -124,7 +124,7 @@
 
                 const response = await axios.get(`/options/get/${catId}/${subCatId}/${serviceId}`);
                 console.log(response.data.response.data);
-                if (response.data.response.length === 0) {
+                if (response.data.response.data.length === 0) {
                     document.getElementById("modalBody").innerHTML = "<p>No services available.</p>";
                     return;
                 }
@@ -145,7 +145,7 @@
                         <img src="${service.img ? service.img : 'https://via.placeholder.com/150'}"
                             alt="${service.name}" class="img-fluid rounded" style="height: 130px; object-fit: cover;">
 
-                        <a href="/options?service_name=${service.name}&optionId=${service.id}&catId=${catId}&subCatId=${subCatId}" class="btn service-br bg-dark text-white position-absolute w-25"
+                        <a href="/options?service_name=${service.name}&optionId=${service.id}&catId=${catId}&subCatId=${subCatId}" class="btn btn-sm service-br bg-dark text-white position-absolute w-25"
                             style="top: 80%; left: 50%; transform: translate(-50%, -50%);">
                             Book Now
                         </a>
@@ -156,7 +156,6 @@
 
                 document.getElementById("modalBody").innerHTML = modalContent;
 
-                // Open Modal
                 var myModal = new bootstrap.Modal(document.getElementById('serviceModal'));
                 myModal.show();
 

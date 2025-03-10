@@ -61,6 +61,7 @@ class SubCategoryService
             return DB::table('service')
                 ->select(
                     'service.name as service_name',
+                    'service.img as service_img',
                     'service.id as service_id',
                     'service.catId as catId',
                     'sub_category.id as sub_category_id',
@@ -77,7 +78,8 @@ class SubCategoryService
                     'category_name' => $items[0]->sub_category_name,
                     'service' => $items->map(fn($item) => [
                         'service_id' => $item->service_id,
-                        'service_name' => $item->service_name
+                        'service_name' => $item->service_name,
+                        'service_img' => $item->service_img,
                     ])->values()->all(),
                 ])
                 ->values();

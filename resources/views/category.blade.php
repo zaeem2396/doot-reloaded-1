@@ -60,7 +60,7 @@
                                     <img src="{{$service['service_img']}}"
                                         alt="Service Image" class="img-fluid service-br rounded"
                                         style="width: 150px; height: 100px; object-fit: cover;">
-                                    <button data-service-id="{{$service['service_id']}}" onclick="fetchOptions(this);" type="button" class="btn btn-primary position-absolute" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                                    <button data-service-id="{{$service['service_id']}}" onclick="fetchOptions(this);" type="button" class="btn service-br btn-md bg-dark text-white position-absolute" data-bs-toggle="modal" data-bs-target="#serviceModal"
                                         style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
                                         Add
                                     </button>

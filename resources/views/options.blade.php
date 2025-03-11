@@ -8,46 +8,47 @@
             <div class="row justify-content-center mb-4">
                 <div class="col-md-12">
                     <div class="sectionTitle text-center">
-                        <h1 class="text-capitalize">{{$serviceName }}</h1>
+                        <h1 class="text-capitalize">{{ $serviceName }}</h1>
                         <hr class="">
+                    </div>
                 </div>
-            </div>
-            <!-- section title ends -->
-            <div class="row justify-content-center">
-
-                <div class="col-md-8 ps-lg-5 ps-xl-7 mt-2 mt-md-0">
-                    <div class="row g-4">
-                        <!-- Service Card -->
-                        @foreach ($serviceOptions['original']['response']['data'] as $options)
-                        <div class="col-12" id="">
-                            <div class="card h-100 d-flex flex-row align-items-center position-relative">
-                                <div class="card-body" style="width: 60%;">
-                                    <a href="javascript:void(0)">
-                                        <h4 class="card-title text-uppercase">{{$options['options']}}</h4>
-                                    </a>
-                                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                        Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
-                                    </p>
-                                    <a href="javascript:void(0)" data-option-id="1" onclick="fetchOptions(this);"
-                                        class="btn service-br btn-sm bg-dark text-white" data-bs-toggle="modal" data-bs-target="#serviceModal">Read more</a>
-                                </div>
-                                <div class="card-img position-relative" style="width: 40%;">
-                                    <img src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg"
-                                        alt="Service Image" class="img-fluid service-br rounded"
-                                        style="width: 150px; height: 100px; object-fit: cover;">
-                                    <button data-option-id="1" onclick="fetchOptions(this);" type="button" class="btn btn-primary position-absolute" data-bs-toggle="modal" data-bs-target="#serviceModal"
-                                        style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
-                                        Add
-                                    </button>
+                <!-- section title ends -->
+                <div class="row justify-content-center">
+                    <div class="col-md-2"></div>   
+                    <div class="col-md-8 ps-lg-5 ps-xl-7 mt-2 mt-md-0">
+                        <div class="row g-4">
+                            <!-- Service Card -->
+                            @foreach ($serviceOptions['original']['response']['data'] as $options)
+                            <div class="col-12" id="">
+                                <!-- padding is temporary, remove afterwards -->
+                                <div class="card h-100 d-flex flex-row align-items-center position-relative">
+                                    <div class="card-body" style="width: 60%;">
+                                        <a href="javascript:void(0)">
+                                            <h4 class="card-title text-uppercase">{{$options['options']}}</h4>
+                                        </a>
+                                        <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            Molestias dignissimos rerum illum iusto quo asperiores sunt reprehenderit?
+                                        </p>
+                                        <a href="javascript:void(0)" data-option-id="1" onclick="fetchOptions(this);"
+                                            class="btn service-br btn-sm bg-dark text-white" data-bs-toggle="modal" data-bs-target="#serviceModal">Read more</a>
+                                    </div>
+                                    <div class="card-img position-relative" style="width: 40%;">
+                                        <img src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg"
+                                            alt="Service Image" class="img-fluid service-br rounded"
+                                            style="width: 150px; height: 100px; object-fit: cover;">
+                                        <button data-option-id="1" onclick="fetchOptions(this);" type="button" class="btn btn-primary position-absolute" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                                            style="bottom: 10px; left: 10px; transform: translate(50%, 50%);">
+                                            Add
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
+                            <hr style="flex-grow: 1; margin-left: 10px; border-top: 1px solid #d9d9d9;">
+                            @endforeach
                         </div>
-                        <hr style="flex-grow: 1; margin-left: 10px; border-top: 1px solid #d9d9d9;">
-                        @endforeach
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Service model starts -->

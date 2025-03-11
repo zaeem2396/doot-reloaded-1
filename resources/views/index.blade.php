@@ -7,32 +7,32 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- First Section: Cards (Always Visible) -->
-                <div class="element_row col-md-6" style="margin-top: 10rem;">
-                    <h1 class="text-center mb-4">Home services at your doorstep</h1>
+                <div class="element_row col-md-6 mx-auto" style="margin-top: 7rem;">
+                    <h1 class="text-center mb-3" style="font-size: 24px;">Home services at your doorstep</h1>
                     <div class="row">
-                        <!-- Card Row -->
                         @foreach ($categories['response']['data'] as $cat)
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="card card-body text-center" style="border-radius: 20px;">
-                                <div class="text center">
+                        <div class="col-12 col-sm-6 col-md-4 mb-3">
+                            <div class="card card-body text-center p-3 shadow-sm" style="border-radius: 15px;">
+                                <div class="text-center">
                                     <img src="https://productimages.withfloats.com/serviceimages/tile/633169c534005f6cf4475d13Pest%20Control%20Service"
-                                        style="height: 56px; width: 56px;" alt="" srcset="">
+                                        class="img-fluid" style="height: 50px; width: 50px;" alt="">
                                 </div>
-                                <a href="/service/{{$cat['name']}}" class="btn btn-sm mt-3 br--20" style="background-color: #a91d3b;">
-                                    {{ str_replace('-', ' ', $cat['name']) }}
-                                </a>
+                                <div class="">
+                                    <a href="/service/{{$cat['name']}}" class="btn btn-sm mt-2 text-white w-50" style="background-color: #a91d3b; border-radius: 15px; font-size: 10px;">
+                                        {{ str_replace('-', ' ', $cat['name']) }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         @endforeach
                     </div>
                 </div>
-
                 <!-- Second Section: Banner (Hidden on Mobile) -->
                 <div id="banner-slider" class="element_row col-md-6 d-none d-md-block">
                     <div class="item">
                         <div class="bg-image-holder"
                             style="background-image: url('assets/photo-collage.png.png'); height: 457px; margin-top: 4rem;">
-                            <div class="slider-caption container">
+                            <div class="slider-caption container" style="margin-top: 10rem;">
                                 <div class="caption-content">
                                 </div>
                             </div>

@@ -55,4 +55,14 @@ class OptionService
             return $this->response->error(['message' => $e->getMessage()]);
         }
     }
+
+    public function checkIfOptionExist($name)
+    {
+        try {
+            $isOptionExist = $this->optionServiceRepository->exist($name);
+            return $this->response->success(['data' => $isOptionExist]);
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
 }

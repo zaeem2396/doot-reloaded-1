@@ -1,28 +1,14 @@
-name: Local CI/CD for homedoot
+name: Laravel CI/CD with Docker
 
 on:
   push:
     branches:
-      - main  
+      - main  # Adjust the branch name if needed
   pull_request:
-    branches:
-      - main  
 
 jobs:
-  build-and-test:
+  deploy:
     runs-on: ubuntu-latest
-
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_DATABASE: doot
-          MYSQL_USER: doot
-          MYSQL_PASSWORD: doot
-          MYSQL_ROOT_PASSWORD: root_doot
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping --host=localhost --user=root --password=root_doot" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
       - name: Checkout Code
@@ -31,25 +17,43 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Kill Running Containers (if any)
-        run: |
-          docker kill $(docker ps -q) || true
-          docker compose down || true
-
       - name: Start Docker Containers
-        run: docker compose up -d --build
-
-      - name: Install Dependencies
         run: |
-          docker exec doot php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction --prefer-dist --optimize-autoloader
+          docker compose up -d --build
 
-      - name: Run Database Migrations
+      - name: Ensure Containers Are Running
+        run: |
+          echo "Waiting for services to be ready..."
+          sleep 10
+          docker ps
+
+      - name: Ensure MySQL is Ready
+        run: |
+          until docker exec doot_storage mysqladmin ping -h"mysql" --silent; do
+            echo "Waiting for MySQL..."
+            sleep 2
+          done
+          echo "MySQL is ready!"
+
+      - name: Run Composer Install
+        run: |
+          docker exec doot php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction --prefer-dist --optimize-autoloader || (
+            echo "Composer install failed, restarting container..."
+            docker restart doot
+            sleep 5
+            docker exec doot php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction --prefer-dist --optimize-autoloader
+          )
+
+      - name: Run Migrations & Seeders
         run: |
           docker exec doot php artisan migrate --force
+          docker exec doot php artisan db:seed --force
 
-      - name: Run Tests
+      - name: Clear Cache & Restart Queue
         run: |
-          docker exec doot php artisan test
+          docker exec doot php artisan config:clear
+          docker exec doot php artisan cache:clear
+          docker exec doot php artisan queue:restart
 
-      - name: Stop Containers
-        run: docker compose down
+      - name: Restart Application
+        run: docker restart doot

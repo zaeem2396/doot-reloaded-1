@@ -1,0 +1,55 @@
+name: Local CI/CD for homedoot
+
+on:
+  push:
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: doot
+          MYSQL_USER: doot
+          MYSQL_PASSWORD: doot
+          MYSQL_ROOT_PASSWORD: root_doot
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping --host=localhost --user=root --password=root_doot" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Kill Running Containers (if any)
+        run: |
+          docker kill $(docker ps -q) || true
+          docker compose down || true
+
+      - name: Start Docker Containers
+        run: docker compose up -d --build
+
+      - name: Install Dependencies
+        run: |
+          docker exec doot composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Run Database Migrations
+        run: |
+          docker exec doot php artisan migrate --force
+
+      - name: Run Tests
+        run: |
+          docker exec doot php artisan test
+
+      - name: Stop Containers
+        run: docker compose down

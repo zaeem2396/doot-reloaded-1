@@ -124,6 +124,32 @@
                 /* Reduce height for smaller screens */
             }
         }
+
+        /* 404 image style */
+        .not-found-img {
+            max-width: 100%;
+            /* Ensures it never overflows */
+            height: auto;
+            /* Maintains aspect ratio */
+        }
+
+        @media (min-width: 768px) {
+
+            /* Tablet and Desktop */
+            .not-found-img {
+                max-width: 400px;
+                /* Set a max width for larger screens */
+            }
+        }
+
+        @media (max-width: 767px) {
+
+            /* Mobile */
+            .not-found-img {
+                max-width: 80%;
+                /* Adjust width for smaller screens */
+            }
+        }
     </style>
 </head>
 

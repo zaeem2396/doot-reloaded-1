@@ -18,7 +18,7 @@
                     <div class="col-md-8 ps-lg-5 ps-xl-7 mt-2 mt-md-0">
                         <div class="row g-4">
                             <!-- Service Card -->
-                            @foreach ($serviceOptions['original']['response']['data'] as $options)
+                            @foreach ($serviceOptions['options'] as $options)
                             <div class="col-12" id="">
                                 <!-- padding is temporary, remove afterwards -->
                                 <div class="card h-100 d-flex flex-row align-items-center position-relative">

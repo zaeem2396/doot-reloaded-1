@@ -45,7 +45,25 @@ class OptionController extends Controller
                 'subCatId' => $subCatId,
                 'optionId' => $optionId,
             ]);
-            $data['serviceOptions'] = json_decode(json_encode($serviceOptionsResponse), true);
+            $serviceOptions = json_decode(json_encode($serviceOptionsResponse), true);
+
+            // Extract `moreInfo` from the first array item
+            $moreInfo = [
+                'included' => $serviceOptions['original']['response']['data'][0]['included'] ?? null,
+                'excluded' => $serviceOptions['original']['response']['data'][0]['excluded'] ?? null,
+                'provideByCustomer' => $serviceOptions['original']['response']['data'][0]['provideByCustomer'] ?? null,
+            ];
+
+            // Remove redundant keys from each array item
+            $filteredOptions = array_map(function ($item) {
+                return array_diff_key($item, array_flip(['included', 'excluded', 'provideByCustomer']));
+            }, $serviceOptions['original']['response']['data']);
+
+            // Assign the transformed data
+            $data['serviceOptions'] = [
+                'options' => $filteredOptions,
+                'moreInfo' => $moreInfo
+            ];
             return view('options', $data);
         } catch (Exception $e) {
             return $this->response->error(['message' => $e->getMessage()]);

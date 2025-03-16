@@ -9,6 +9,7 @@ use App\Utils\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use PHPOpenSourceSaver\JWTAuth\Claims\Custom;
+use App\Services\StateService;
 
 class AuthController extends Controller
 {
@@ -16,7 +17,8 @@ class AuthController extends Controller
         private Response $response,
         private CategoryService $categoryService,
         private SubCategoryService $subCategoryService,
-        private CustomerService $customerService
+        private CustomerService $customerService,
+        private StateService $stateService
     ) {}
 
     public function login()
@@ -29,6 +31,7 @@ class AuthController extends Controller
     public function register()
     {
         $data['pageTitle'] = 'Register';
+        $data['state'] = $this->stateService->all();
         $data['categories'] = $this->categoryService->getCategories()->getData(true);
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
         return view('register', $data);

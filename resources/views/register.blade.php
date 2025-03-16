@@ -40,6 +40,9 @@
                                     <span id="stateError" class="text-danger"></span>
                                     <select id="state" class="form-control">
                                         <option value="" selected disabled>--Select state--</option>
+                                        @foreach ($state as $s)
+                                        <option value="{{ $s->id }}">{{ $s->state_name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

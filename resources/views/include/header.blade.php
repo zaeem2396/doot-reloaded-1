@@ -110,20 +110,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/about-us">About us</a>
                         </li>
-                        <!-- <li class="nav-item dropdown drop_single ">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Pages</a>
-                            <ul class="dropdown-menu dd_first">
-                                <li><a href="page-contactus.html">Contact Us </a></li>
-                                <li><a href="page-member-details.html">Profile</a></li>
-                                <li><a href="page-team.html">Team</a></li>
-                                <li><a href="page-aboutus.html">About Us</a></li>
-                                <li><a href="page-career.html">Career</a></li>
-                                <li><a href="page-career-details.html">Career details</a></li>
-                                <li><a href="404.html">404 page</a></li>
-                                <li><a href="page-comingsoon.html">Coming Soon</a></li>
-                            </ul>
-                        </li> -->
 
                         <li class="nav-item dropdown drop_single d-none">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
@@ -176,64 +162,16 @@
                             </ul>
                         </li>
 
-                        <li class=" dropdown megaDropMenu nav-item ">
+                        <li class="nav-item dropdown drop_single ">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Elements</a>
-                            <ul class="row dropdown-menu">
-                                <li class="col-md-3 col-12">
-                                    <h6>General Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="basic-accordions.html">Accordions</a></li>
-                                        <li><a href="basic-alert.html">Alerts</a></li>
-                                        <li><a href="basic-animation.html">Animation</a></li>
-                                        <li><a href="basic-badge.html">Badge</a></li>
-                                        <li><a href="basic-background.html">Background</a></li>
-                                        <li><a href="basic-buttons.html">Buttons</a></li>
-                                        <li><a href="basic-buttons-group.html">Button Group</a></li>
-                                        <li><a href="basic-card.html">Card</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col-md-3 col-12">
-                                    <h6>General Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="basic-carousel.html">Carousel</a></li>
-                                        <li><a href="basic-countdown.html">Countdown</a></li>
-                                        <li><a href="basic-counter.html">Counter</a></li>
-                                        <li><a href="basic-divider.html">Dividers</a></li>
-                                        <li><a href="basic-forms.html">Forms</a></li>
-                                        <li><a href="basic-heading.html">Heading</a></li>
-                                        <li><a href="basic-icon-style.html">Icon styles </a></li>
-                                        <li><a href="basic-iconset.html">Iconset - FontAwesome </a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col-md-3 col-12">
-                                    <h6>General Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="basic-image.html">Image</a></li>
-                                        <li><a href="basic-map.html">Map</a></li>
-                                        <li><a href="basic-modal.html">Modal</a></li>
-                                        <li><a href="basic-progressbar.html">Progress</a></li>
-                                        <li><a href="basic-tabs.html">Tabs & wizards</a></li>
-                                        <li><a href="basic-tables.html">Tables</a></li>
-                                        <li><a href="basic-typography.html">Typography</a></li>
-                                        <li><a href="basic-video.html">Video & Audio</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="col-md-3 col-12">
-                                    <h6>Theme Kit Elements</h6>
-                                    <ul class="list-unstyled">
-                                        <li><a href="kit-breadcrumb.html">Breadcrumb</a></li>
-                                        <li><a href="kit-gallery.html">Gallery</a></li>
-                                        <li><a href="kit-navbar.html">Navbar</a></li>
-                                        <li><a href="kit-pagination.html">Pagination</a></li>
-                                        <li><a href="kit-pricing.html">Pricing</a></li>
-                                        <li><a href="kit-team.html">Team</a></li>
-                                        <li><a href="kit-testimonials.html">Testimonials</a></li>
-                                    </ul>
-                                </li>
+                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Login</a>
+                            <ul class="dropdown-menu dd_first">
+                                <li><a href="/login">Customer login</a></li>
+                                <li><a href="portfolio-3-column.html">Three column</a></li>
+                                <li><a href="portfolio-4-column-fullwidth.html">Four column</a></li>
+                                <li><a href="project-style-1.html">Project style 1</a></li>
+                                <li><a href="project-style-2.html">Project style 2</a></li>
+                                <li><a href="project-style-3.html">Project style 3</a></li>
                             </ul>
                         </li>
 

@@ -14,11 +14,11 @@
                         <div class="col-12 col-sm-6 col-md-4 mb-3">
                             <div class="card card-body text-center p-3 shadow-sm" style="border-radius: 15px;">
                                 <div class="text-center">
-                                    <img src="https://productimages.withfloats.com/serviceimages/tile/633169c534005f6cf4475d13Pest%20Control%20Service"
+                                    <img src="{{$cat['img']}}"
                                         class="img-fluid" style="height: 50px; width: 50px;" alt="">
                                 </div>
                                 <div class="">
-                                    <a href="/service/{{$cat['name']}}" class="btn btn-sm mt-2 text-white w-50" style="background-color: #a91d3b; border-radius: 15px; font-size: 10px;">
+                                    <a href="/service/{{$cat['name']}}" class="text-capitalize" style="font-size: 10px;">
                                         {{ str_replace('-', ' ', $cat['name']) }}
                                     </a>
                                 </div>
@@ -57,8 +57,8 @@
                             <h1 style="color: #a91d3b;">Discover Our Exquisite Women's Salon Services</h1>
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-md text-white" style="background-color: #a91d3b;">Book
-                                Now</button>
+                            <a href="/service/salon-for-women" class="btn btn-md text-white" style="background-color: #a91d3b;">Book
+                                Now</a>
                         </div>
                     </div>
                 </div>

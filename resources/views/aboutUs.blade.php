@@ -9,7 +9,7 @@
         <div class="">
             <ul class="pager middle">
                 <li style="cursor: default;" onclick="gotToHome()">Home</li>
-                <li><a href="javascript:void(0)">about us</a></li>
+                <li><a href="javascript:void(0)">About us</a></li>
             </ul>
         </div>
     </section>

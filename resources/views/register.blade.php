@@ -80,10 +80,11 @@
                         <div class="text-right pb-3">
                             <a href="/login" class="text-dark">Already a user? Click here to login</a>
                         </div>
-                        <div>
+                        <div class="text-center">
                             <button type="button" onclick="register()" style="background-color: #a91d3b;" class="btn btn-md text-white bold w-100">
                                 Register
                             </button>
+                            <span id="registerResponse" class="pt-3 text-success"></span>
                         </div>
                     </form>
                 </div>
@@ -179,8 +180,8 @@
                 password: document.getElementById('password').value.trim()
             });
 
-            console.log(response.data.response.message);
             if (response.data.status === 200) {
+                document.getElementById('registerResponse').innerHTML = response.data.response.message
                 setTimeout(() => {
                     window.location.href = '/login';
                 }, 500);

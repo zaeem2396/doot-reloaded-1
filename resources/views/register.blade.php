@@ -38,7 +38,7 @@
                             <div class="col-md-6 col-12">
                                 <div class="form-group">
                                     <span id="stateError" class="text-danger"></span>
-                                    <select id="state" class="form-control">
+                                    <select onclick="fetchCitiesListOnStateId()" id="state" class="form-control">
                                         <option value="" selected disabled>--Select state--</option>
                                         @foreach ($state as $s)
                                         <option value="{{ $s->id }}">{{ $s->state_name }}</option>
@@ -95,6 +95,29 @@
 @include('include.footer')
 
 <script>
+    const fetchCitiesListOnStateId = async () => {
+        const stateId = document.getElementById('state').value;
+        const cityElement = document.getElementById('city');
+
+        try {
+            const response = await axios.get(`/cities/${stateId}`);
+            // console.log(response.data.response.data);
+            // return
+            const cities = response.data.response.data;
+
+            cityElement.innerHTML = '<option value="" selected disabled>--Select city--</option>';
+
+            cities.forEach(city => {
+                const option = document.createElement('option');
+                option.value = city.id;
+                option.innerText = city.city_name;
+                cityElement.appendChild(option);
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
     const validateField = (id, errorId, errorMessage) => {
         const value = document.getElementById(id).value.trim();
         const errorElement = document.getElementById(errorId);
@@ -157,6 +180,11 @@
             });
 
             console.log(response.data.response.message);
+            if (response.data.status === 200) {
+                setTimeout(() => {
+                    window.location.href = '/login';
+                }, 500);
+            }
         } catch (error) {
             console.error(error);
         }

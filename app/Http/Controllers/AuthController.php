@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\CategoryService;
+use App\Services\CityService;
 use App\Services\CustomerService;
 use App\Services\SubCategoryService;
 use App\Utils\Response;
@@ -10,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use PHPOpenSourceSaver\JWTAuth\Claims\Custom;
 use App\Services\StateService;
+use Exception;
 
 class AuthController extends Controller
 {
@@ -18,7 +20,8 @@ class AuthController extends Controller
         private CategoryService $categoryService,
         private SubCategoryService $subCategoryService,
         private CustomerService $customerService,
-        private StateService $stateService
+        private StateService $stateService,
+        private CityService $cityService
     ) {}
 
     public function login()
@@ -54,11 +57,21 @@ class AuthController extends Controller
             ]);
 
             if ($validator->fails()) {
-                return $this->response->error(['message' => $validator->errors()->first()]);
+                return $this->response->error(['message' => $validator->errors()->all()]);
             }
             $response = $this->customerService->registerUser($inputData);
             return $response;
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
+
+    public function getCities($stateId)
+    {
+        try {
+            $cities = $this->cityService->getCityByStateId($stateId);
+            return $this->response->success(['data' => $cities]);
+        } catch (Exception $e) {
             return $this->response->error(['message' => $e->getMessage()]);
         }
     }

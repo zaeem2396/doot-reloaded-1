@@ -128,7 +128,7 @@
                         <li class="nav-item dropdown drop_single">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Services</a>
-                            <ul class="dropdown-menu dd_first">
+                            <ul class="dropdown-menu dd_first custom-dropdown">
                                 @foreach ($subCategories['response']['data'] as $sc)
                                 <li><a href="/service/{{$sc['name']}}">{{str_replace('-', ' ', $sc['name'])}}</a></li>
                                 @endforeach

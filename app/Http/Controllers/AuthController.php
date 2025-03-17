@@ -26,6 +26,7 @@ class AuthController extends Controller
 
     public function login()
     {
+        $data['pageTitle'] = 'Login';
         $data['categories'] = $this->categoryService->getCategories()->getData(true);
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
         return view('login', $data);

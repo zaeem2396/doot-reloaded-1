@@ -93,13 +93,13 @@
                         <p class="text-muted">
                             <b>Excluded: </b>
                             <span>
-                                {{ $serviceOptions['moreInfo']['excluded'] }}
+                                {!! $serviceOptions['moreInfo']['excluded'] !!}
                             </span>
                         </p>
                         <p class="text-muted">
                             <b>Provided by customer: </b>
                             <span>
-                                {{ $serviceOptions['moreInfo']['provideByCustomer'] }}
+                                {!! $serviceOptions['moreInfo']['provideByCustomer'] !!}
                             </span>
                         </p>
                     </div>

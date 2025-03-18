@@ -45,4 +45,13 @@ class CustomerRepository
     {
         return $this->user->where('id', $id)->update($data);
     }
+
+    /*
+    * Find customer based on mobile number 
+    */
+
+    public function findCustomerByMobile(string $mobile): bool
+    {
+        return $this->user->where('mobile', $mobile)->exists();
+    }
 }

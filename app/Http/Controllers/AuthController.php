@@ -67,6 +67,25 @@ class AuthController extends Controller
         }
     }
 
+    public function loginUser(Request $request)
+    {
+        try {
+            $inputData = $request->only('mobile', 'password');
+            $validator = Validator::make($inputData, [
+                'mobile' => 'required|max:10',
+                'password' => 'required',
+            ]);
+
+            if ($validator->fails()) {
+                return $this->response->error(['message' => $validator->errors()->all()]);
+            }
+            $response = $this->customerService->loginUser($inputData);
+            return $response;
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
+
     public function getCities($stateId)
     {
         try {

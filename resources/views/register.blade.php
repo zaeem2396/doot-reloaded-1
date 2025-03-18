@@ -102,8 +102,6 @@
 
         try {
             const response = await axios.get(`/cities/${stateId}`);
-            // console.log(response.data.response.data);
-            // return
             const cities = response.data.response.data;
 
             cityElement.innerHTML = '<option value="" selected disabled>--Select city--</option>';

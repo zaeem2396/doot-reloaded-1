@@ -43,10 +43,12 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/about-us', [IndexController::class, 'aboutUs']);   
 Route::get('/service/{name}', [CategoryController::class, 'index']);
 
-/* Login/Register routes */
+/* Get Login/Register routes */
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'register']);
 
+/* Post Login/Register routes */
+Route::post('/login', [AuthController::class, 'loginUser']);
 Route::post('/register', [AuthController::class, 'registerUser']);
 
 /* City routes */

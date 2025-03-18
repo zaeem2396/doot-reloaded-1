@@ -8,9 +8,8 @@
             <div class="row justify-content-center mb-4">
                 <div class="col-md-12">
                     <div class="sectionTitle text-center">
-                        <h1>{{ucfirst(str_replace('-', ' ', $pageTitle))}}</h1>
+                        <h1>{{ucfirst(str_replace('-', ' ', $h1)) ?? ''}}</h1>
                         <hr class="">
-                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm temp</p> -->
                     </div>
                 </div>
             </div>

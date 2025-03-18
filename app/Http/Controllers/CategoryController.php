@@ -25,6 +25,7 @@ class CategoryController extends Controller
         $data['pageTitle'] = $data['catId']['response']['data'][0]['seo_title'];
         $data['seoDescription'] = $data['catId']['response']['data'][0]['seo_description'];
         $data['seoKeywords'] = $data['catId']['response']['data'][0]['seo_keywords'];
+        $data['h1'] = $data['catId']['response']['data'][0]['h1_tag'];
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
         $data['services'] = $this->subCategoryService->getServicesGroupedBySubCategory($data['catId']['response']['data'][0]['id']);
         return view('category', $data);

@@ -3,35 +3,38 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="footer-text">
-                    <a href="#">
-                        <img style="background-color: #000; height: 4.5rem;"
-                            src="https://homedoot.com/public/assets/new_theme/img/logo.png" alt="" srcset="">
-                    </a>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation.
-                    </p>
+                    <div class="links">
+                        <h3>Quick links</h3>
+                        <ul class="">
+                            <li>
+                                <a href="/home-cleaning-services-in-navi-mumbai" target="_blank" rel="noopener noreferrer" style="color: #fffdfd; text-decoration: none;">Home cleaning service in Navi Mumbai</a>
+                            </li>
+                            <li>
+                                <a href="/home-cleaning-services-in-thane" target="_blank" rel="noopener noreferrer" style="color: #fffdfd; text-decoration: none;">Home cleaning service in Thane</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-2 col-md-2">
                 <div class="links">
                     <h3>Links</h3>
                     <ul class="">
-                        <li><a href="index-2.html">Home</a></li>
-                        <li><a href="page-aboutus.html">About Us</a></li>
-                        <li><a href="services-1.html">Services</a></li>
-                        <li><a href="portfolio-3-column.html">Portfolios</a></li>
-                        <li><a href="blog-classic-left-sidebar.html">Latest Blog</a></li>
+                        <li><a style="color: #fffdfd; text-decoration: none;" href="index-2.html">Home</a></li>
+                        <li><a style="color: #fffdfd; text-decoration: none;" href="page-aboutus.html">About Us</a></li>
+                        <li><a style="color: #fffdfd; text-decoration: none;" href="services-1.html">Services</a></li>
+                        <li><a style="color: #fffdfd; text-decoration: none;" href="portfolio-3-column.html">Portfolios</a></li>
+                        <li><a style="color: #fffdfd; text-decoration: none;" href="blog-classic-left-sidebar.html">Latest Blog</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="location">
-                    <h3>Location</h3>
+                    <h3>Contact</h3>
                     <ul>
                         <li><i class="fa fa-home"></i> {{getAppSettings()['original']['response']['data']['address']}}</li>
-                        <li><i class="fa fa-phone"></i> <a href="tel:{{getAppSettings()['original']['response']['data']['contactMobile']}}">{{getAppSettings()['original']['response']['data']['contactMobile']}}</a></li>
-                        <li><i class="fa fa-envelope"></i> <a href="mailto: {{getAppSettings()['original']['response']['data']['supportEmail']}}"> {{getAppSettings()['original']['response']['data']['supportEmail']}} </a></li>
+                        <li><i class="fa fa-phone"></i> <a style="color: #fffdfd; text-decoration: none;" href="tel:{{getAppSettings()['original']['response']['data']['contactMobile']}}">{{getAppSettings()['original']['response']['data']['contactMobile']}}</a></li>
+                        <li><i class="fa fa-envelope"></i> <a style="color: #fffdfd; text-decoration: none;" href="mailto: {{getAppSettings()['original']['response']['data']['supportEmail']}}"> {{getAppSettings()['original']['response']['data']['supportEmail']}} </a></li>
                     </ul>
                 </div>
             </div>

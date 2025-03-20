@@ -148,18 +148,8 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown drop_single ">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Blogs</a>
-                            <ul class="dropdown-menu dd_first">
-                                <li><a href="blog-classic-left-sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog-classic-right-sidebar.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-classic-fullwidth.html">Blog Fullwidth</a></li>
-                                <li><a href="blog-grid-two-column.html">Blog two column</a></li>
-                                <li><a href="blog-grid-three-column.html">Blog three column</a></li>
-                                <li><a href="blog-singlepost-left-sidebar.html">Post left Sidebar</a></li>
-                                <li><a href="blog-singlepost-right-sidebar.html">Post Right Sidebar</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">Blog</a>
                         </li>
 
                         <li class="nav-item dropdown drop_single ">
@@ -167,11 +157,6 @@
                                 aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">Login</a>
                             <ul class="dropdown-menu dd_first">
                                 <li><a href="/login">Customer login</a></li>
-                                <li><a href="portfolio-3-column.html">Three column</a></li>
-                                <li><a href="portfolio-4-column-fullwidth.html">Four column</a></li>
-                                <li><a href="project-style-1.html">Project style 1</a></li>
-                                <li><a href="project-style-2.html">Project style 2</a></li>
-                                <li><a href="project-style-3.html">Project style 3</a></li>
                             </ul>
                         </li>
 

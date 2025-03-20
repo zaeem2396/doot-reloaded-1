@@ -3,7 +3,7 @@
 
     <!-- BREDCRUMB -->
     <section class="bredcrumb">
-        <div class="bg-image text-center" style="background-image: url('https://res.cloudinary.com/dyelhjua9/image/upload/v1742487119/ac-installation_jf97ei.png');">
+        <div class="bg-image text-center" style="background-image: url('https://res.cloudinary.com/dyelhjua9/image/upload/v1742495020/home-cleaning_h08gch.jpg');">
             <h1>{{$h1}}</h1>
         </div>
     </section>
@@ -12,30 +12,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="">
-                        <img src="https://res.cloudinary.com/dyelhjua9/image/upload/v1742487119/ac-installation_jf97ei.png" alt="about-us">
+                    <div class="text-center">
+                        <img src="https://res.cloudinary.com/dyelhjua9/image/upload/v1742495020/home-cleaning_h08gch.jpg"
+                            alt="about-us"
+                            class="img-fluid rounded w-100"
+                            style="max-width: 100%; height: auto; object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-12 pt-4">
-                    <p>Air Conditioner holds a lot of importance nowadays because it helps in keeping the area at a perfect temperature. We are one of the leading providers of <b>AC Installation Services In Navi Mumbai</b> because we are providing everyone with excellent quality AC installation services at reasonable prices. </p>
-                    <p>
-                        At Home Doot, we are your one-stop solution for maintaining a clean, comfortable, and pest-free environment within your home or workplace. With years of expertise and a commitment to excellence, we offer a range of services including AC repair, home cleaning, deep cleaning, housekeeping, floor cleaning, and pest control, ensuring your spaces remain inviting.
+                    <p>A clean and organized home is not just aesthetically pleasing but also contributes to a healthier and happier lifestyle. At Home Doot, our professional <b>Home Cleaning Services In Navi Mumbai</b> are designed to bring sparkle and freshness to every corner of your abode, offering a range of benefits for you and your family.
                     </p>
+                    <li>Thorough Cleaning: Our trained professionals perform deep cleaning, reaching overlooked areas and ensuring a spotless environment.</li>
+                    <li>Elimination of Dirt and Allergens: Removing dust, allergens, and pollutants creates a healthier indoor environment, especially beneficial for those with allergies or respiratory conditions.</li>
+                    <li>Saves Time: Hiring professionals saves you valuable time and effort, allowing you to focus on other priorities.</li>
+                    <li>Flexible Scheduling: Services tailored to your schedule offer convenience without disrupting your routine.</li>
+                    <li>Attention to Detail: Professionals pay attention to your preferences and specific areas of concern, ensuring satisfaction with the results.</li>
+                    <li>Environmentally Friendly: Some services use eco-friendly products, promoting a safer environment for your family and pets.</li>
+                    <li>Improved Air Quality: Clean spaces promote better indoor air quality, contributing to overall well-being.</li>
                     <p>
-                        Why Our AC Installation Services In Navi Mumbai?
-                    </p>
-                    <li>Technical Knowledge: We have expertise in handling various types of AC units, ensuring proper installation according to manufacturer specifications.</li>
-                    <li>Precision Installation: We guarantee correct placement, proper fittings, and secure connections, optimizing the AC system's performance.</li>
-                    <li>Manufacturer Guidelines: Proper installation by certified professionals adheres to manufacturer guidelines, safeguarding warranty coverage.</li>
-                    <li>Compliance with Regulations: Professionals ensure installations comply with local codes and safety regulations, avoiding potential issues and ensuring safety.</li>
-                    <li>Tailored Installations: Experts offer advice on suitable AC units based on space, cooling requirements, and budget, providing customized solutions.</li>
-                    <li>System Optimization: They help choose the right-sized units and configurations, ensuring the system matches the space's needs for efficient operation.</li>
-                    <p>
-                        If you or anyone you might know is searching for <b>AC Installation Services in Navi Mumbai</b>, then you don’t have to look for it any further, as we are the destination for you. We value the trust of the clients, and that is the reason why we have become the top choice of the people all around who want to install an air conditioner at their place.
-                    </p>
-                    <p>
-                        We have years of experience and expertise in this domain, that is the reason why we have become famous. To know more, you can connect with us, and we will provide you with the best AC installation services according to your requirements.
-
+                        If you or anyone you might know is searching for <b>Home Cleaning Services In Mumbai, Panvel, Kharghar, or Thane</b>, then you don’t have to look for it, because we are the destination for you. We have years of experience and expertise, with the help of which we always deliver the right set of home cleaning services. To know more, you can connect with us, and we will deliver you the best as per the requirement.
                     </p>
                 </div>
             </div>

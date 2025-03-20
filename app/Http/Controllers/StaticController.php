@@ -34,4 +34,15 @@ class StaticController extends Controller
         $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
         return view('homeCleaningServiceInThane', $data);
     }
+
+    public function blog()
+    {
+        $data['pageTitle'] = 'Blog - Home Doot';
+        $data['seoDescription'] = 'Read our blog to get the latest updates on home cleaning services, pest control, and AC services. Stay informed with Home Doot’s expert advice and tips.';
+        $data['seoKeywords'] = 'home cleaning services, pest control, AC services';
+        $data['h1'] = 'Home Doot Blog';
+        $data['categories'] = $this->categoryService->getCategories()->getData(true);
+        $data['subCategories'] = $this->subCategoryService->getSubCategories()->getData(true);
+        return view('blog', $data);
+    }
 }

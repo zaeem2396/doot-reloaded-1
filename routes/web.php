@@ -56,8 +56,9 @@ Route::post('/register', [AuthController::class, 'registerUser']);
 Route::get('/cities/{stateId}', [AuthController::class, 'getCities']);
 
 
-/* Navi Mumbai and Thane pages
-homeCleaningServiceInNaviMumbai.blade.php
-*/
+/* Navi Mumbai and Thane pages */
 Route::get('/home-cleaning-services-in-navi-mumbai', [StaticController::class, 'homeCleaningServiceInNaviMumbai']);
 Route::get('/home-cleaning-services-in-thane', [StaticController::class, 'homeCleaningServiceInThane']);
+
+/* Blog */
+Route::get('/blog', [StaticController::class, 'blog']);

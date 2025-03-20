@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\OptionController;
+use App\Http\Controllers\StaticController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,3 +54,10 @@ Route::post('/register', [AuthController::class, 'registerUser']);
 
 /* City routes */
 Route::get('/cities/{stateId}', [AuthController::class, 'getCities']);
+
+
+/* Navi Mumbai and Thane pages
+homeCleaningServiceInNaviMumbai.blade.php
+*/
+Route::get('/home-cleaning-services-in-navi-mumbai', [StaticController::class, 'homeCleaningServiceInNaviMumbai']);
+Route::get('/home-cleaning-services-in-thane', [StaticController::class, 'homeCleaningServiceInThane']);

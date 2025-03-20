@@ -18,7 +18,7 @@
                                         class="img-fluid" style="height: 50px; width: 50px;" alt="">
                                 </div>
                                 <div class="">
-                                    <a href="/service/{{$cat['name']}}" class="text-capitalize" style="font-size: 10px;">
+                                    <a href="/service/{{$cat['url']}}" class="text-capitalize" style="font-size: 10px;">
                                         {{ str_replace('-', ' ', $cat['name']) }}
                                     </a>
                                 </div>

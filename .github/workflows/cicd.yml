@@ -1,59 +1,38 @@
-name: Laravel CI/CD with Docker
+name: Laravel CI/CD Pipeline
 
 on:
   push:
     branches:
-      - main  # Adjust the branch name if needed
+      - main  # Change this to your default branch (e.g., master, main, etc.)
   pull_request:
+    branches:
+      - main  # Change this to your default branch (e.g., master, main, etc.)
 
 jobs:
-  deploy:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
-      - name: Start Docker Containers
+      - name: Set up Docker Compose
         run: |
-          docker compose up -d --build
+          docker-compose --version
 
-      - name: Ensure Containers Are Running
+      - name: Build and start containers
         run: |
-          echo "Waiting for services to be ready..."
-          sleep 10
-          docker ps
+          docker-compose up -d --build
 
-      - name: Ensure MySQL is Ready
+      - name: Run Laravel migrations
         run: |
-          until docker exec doot_storage mysqladmin ping -h"mysql" --silent; do
-            echo "Waiting for MySQL..."
-            sleep 2
-          done
-          echo "MySQL is ready!"
+          docker-compose exec app php artisan migrate --force
 
-      - name: Run Composer Install
+      - name: Run Laravel tests
         run: |
-          docker exec doot php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction --prefer-dist --optimize-autoloader || (
-            echo "Composer install failed, restarting container..."
-            docker restart doot
-            sleep 5
-            docker exec doot php -d memory_limit=-1 /usr/local/bin/composer install --no-interaction --prefer-dist --optimize-autoloader
-          )
+          docker-compose exec app php artisan test
 
-      - name: Run Migrations & Seeders
+      - name: Stop and remove containers
+        if: always()
         run: |
-          docker exec doot php artisan migrate --force
-          docker exec doot php artisan db:seed --force
-
-      - name: Clear Cache & Restart Queue
-        run: |
-          docker exec doot php artisan config:clear
-          docker exec doot php artisan cache:clear
-          docker exec doot php artisan queue:restart
-
-      - name: Restart Application
-        run: docker restart doot
+          docker-compose down

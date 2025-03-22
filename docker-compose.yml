@@ -1,38 +1,62 @@
-name: Homedoot CI/CD Pipeline
+version: '3.8'
 
-on:
-  push:
-    branches:
-      - main  # Change this to your default branch (e.g., master, main, etc.)
-  pull_request:
-    branches:
-      - main  # Change this to your default branch (e.g., master, main, etc.)
+services:
+  # Laravel Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: doot
+    restart: always
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    depends_on:
+      - mysql  
 
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+  # PHPMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: doot_phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8080:80"
+    restart: always
+    depends_on:
+      - mysql
+    networks:
+      - app-network
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  # MySQL
+  mysql:
+    image: mysql:8.0
+    container_name: doot_storage
+    restart: always
+    environment:
+      MYSQL_DATABASE: doot
+      MYSQL_USER: doot
+      MYSQL_PASSWORD: doot
+      MYSQL_ROOT_PASSWORD: root_doot
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
 
-      - name: Set up Docker Compose
-        run: |
-          docker compose --version
+  # Mailhog
+  mailhog:
+    image: mailhog/mailhog
+    container_name: doot_mailhog
+    ports:
+      - "1025:1025"    # SMTP server
+      - "8025:8025"    # Web UI
+    networks:
+      - app-network
 
-      - name: Build and start containers
-        run: |
-          docker compose up --build 
-
-      - name: Run Laravel migrations
-        run: |
-          docker compose exec app bash php artisan migrate --force
-
-      - name: Run Laravel tests
-        run: |
-          docker compose exec app bash php artisan test
-
-      - name: Stop and remove containers
-        if: always()
-        run: |
-          docker compose down
+networks:
+  app-network:
+    driver: bridge

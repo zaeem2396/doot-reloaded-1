@@ -4,6 +4,7 @@ use App\Http\Controllers\AppSettingsController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\JwtController;
 use App\Http\Controllers\OptionController;
 use App\Http\Controllers\StaticController;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+/* JWT routes */
+
+Route::post('/verifyToken', [JwtController::class, 'verifyToken']);
 
 /* App Setting route */
 
@@ -41,7 +46,7 @@ Route::group(['prefix' => 'options'], function () {
 });
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/about-us', [IndexController::class, 'aboutUs']);   
+Route::get('/about-us', [IndexController::class, 'aboutUs']);
 Route::get('/service/{name}', [CategoryController::class, 'index']);
 
 /* Get Login/Register routes */

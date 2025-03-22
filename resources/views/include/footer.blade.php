@@ -117,6 +117,7 @@
 <script src="/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDU79W1lu5f6PIiuMqNfT1C6M0e_lq1ECY"></script>
 <script src="/assets/js/biznex.js"></script>
+<script src="/assets/js/util.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <link href="/assets/options/optionswitch.css" rel="stylesheet">
 <script src="/assets/options/optionswitcher.js"></script>

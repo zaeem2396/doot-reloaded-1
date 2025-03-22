@@ -10,10 +10,13 @@ use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
 class JwtHelper
 {
-
     public function __construct(
         private Response $response,
     ) {}
+    
+    /*
+    * Validate token
+    */
 
     public function validateToken(String $token)
     {

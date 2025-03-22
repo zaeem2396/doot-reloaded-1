@@ -36,11 +36,9 @@
                             <!-- Carousel Controls -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
                             </button>
                         </div>
                     </div>
@@ -60,17 +58,10 @@
                                     <p class="mb-3">
                                         <b>Price: </b> {{ $options['price'] }}
                                     </p>
-                                    <a href="javascript:void(0)" data-option-id="1" onclick="fetchOptions(this);"
-                                        class="btn btn-sm bg-dark text-white" data-bs-toggle="modal" data-bs-target="#serviceModal">
-                                        Read more
-                                    </a>
                                 </div>
                                 <div class="card-img position-relative text-center" style="width: 35%;">
-                                    <img src="https://www.nobroker.in/blog/wp-content/uploads/2024/04/home-cleaning-service-apps.jpg"
-                                        alt="Service Image" class="img-fluid rounded" style="max-width: 100%; height: auto; object-fit: cover;">
-                                    <button data-option-id="1" onclick="fetchOptions(this);" type="button"
-                                        class="btn btn-primary position-absolute" data-bs-toggle="modal" data-bs-target="#serviceModal"
-                                        style="bottom: 5px; left: 50%; transform: translateX(-50%);">
+                                    <button data-service-option-id="{{$options['id']}}" onclick="addToCart(this);" type="button"
+                                        class="btn btn-md text-white position-absolute rounded w-50" style="bottom: 5px; left: 50%; transform: translateX(-50%); background-color: #a91d3b;">
                                         Add
                                     </button>
                                 </div>
@@ -118,29 +109,34 @@
 
         </div>
     </section>
-
-    <!-- Service Modal -->
-    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="serviceModalLabel">Service Details</h5>
-                    <button type="button" class="btn btn-sm btn-close bg-dark" data-bs-dismiss="modal" aria-label="Close">X</button>
-                </div>
-                <div class="modal-body text-center" id="modalBody">
-                    <!-- Dynamic content will be injected here by JavaScript -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Service Modal Ends -->
 
     @include('include.footer')
 </div>
 
 <script>
-    // Add any required JavaScript functionality here
+    const addToCart = async (e) => {
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceOptionId = e.getAttribute('data-service-option-id');
+            const catId = urlParams.get('catId');
+            const subCatId = urlParams.get('subCatId');
+            const optionId = urlParams.get('optionId');
+            const quantity = 1;
+            const response = await axios.post('/cart/add', {
+                serviceOptionId,
+                catId,
+                subCatId,
+                optionId,
+                quantity
+            }, {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('access_token')}`
+                }
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
 </script>

@@ -65,7 +65,7 @@ class OptionController extends Controller
                 'optionImages' => json_decode(json_encode($optionImages), true)
             ];
             // echo '<pre>';
-            // print_r($data['serviceOptions']['optionImages']['original']['response']['data']);
+            // print_r($serviceOptions);
             // exit;
             return view('options', $data);
         } catch (Exception $e) {

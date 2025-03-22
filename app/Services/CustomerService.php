@@ -5,7 +5,6 @@ namespace App\Services;
 use App\Repositories\CustomerRepository;
 use App\Utils\Response;
 use Exception;
-use Namshi\JOSE\JWT;
 use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
 class CustomerService

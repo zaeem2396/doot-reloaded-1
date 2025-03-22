@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AppSettingsController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\JwtController;
@@ -21,11 +22,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 /* JWT routes */
-
 Route::post('/verifyToken', [JwtController::class, 'verifyToken']);
 
 /* App Setting route */
-
 Route::group(['prefix' => 'app-settings'], function () {
     Route::post('create', [AppSettingsController::class, 'create']);
     Route::get('get', [AppSettingsController::class, 'get']);
@@ -36,7 +35,6 @@ Route::group(['prefix' => 'category'], function () {
     Route::post('create', [CategoryController::class, 'create']);
     Route::get('get', [CategoryController::class, 'get']);
 });
-
 
 /* Options route */
 Route::group(['prefix' => 'options'], function () {
@@ -60,6 +58,13 @@ Route::post('/register', [AuthController::class, 'registerUser']);
 /* City routes */
 Route::get('/cities/{stateId}', [AuthController::class, 'getCities']);
 
+/* Cart routes */
+Route::group(['prefix' => 'cart'], function () {
+    Route::post('add', [CartController::class, 'add']);
+    Route::get('get', [CartController::class, 'get']);
+    Route::post('remove', [CartController::class, 'remove']);
+    Route::post('update', [CartController::class, 'update']);
+});
 
 /* Navi Mumbai and Thane pages */
 Route::get('/home-cleaning-services-in-navi-mumbai', [StaticController::class, 'homeCleaningServiceInNaviMumbai']);

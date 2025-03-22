@@ -1,0 +1,38 @@
+name: homedoot CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch (e.g., master, main, etc.)
+  pull_request:
+    branches:
+      - main  # Change this to your default branch (e.g., master, main, etc.)
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Compose
+        run: |
+          docker compose version
+
+      - name: Build and start containers
+        run: |
+          docker compose up --build
+
+      - name: Run Laravel migrations
+        run: |
+          docker compose exec app php artisan migrate --force
+
+      - name: Run Laravel tests
+        run: |
+          docker compose exec app php artisan test
+
+      - name: Stop and remove containers
+        if: always()
+        run: |
+          docker compose down

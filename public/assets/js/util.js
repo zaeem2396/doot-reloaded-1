@@ -5,7 +5,7 @@ const verifyJwtToken = async () => {
                 Authorization: `Bearer ${localStorage.getItem('access_token')}`
             }
         });
-        return isTokenValid
+        return isTokenValid.data.status /* returns 200 if token is valid */
     } catch (error) {
         console.error(`something went wrong ${error}`);
     }

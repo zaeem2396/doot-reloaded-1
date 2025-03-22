@@ -57,10 +57,16 @@ class OptionController extends Controller
                 return array_diff_key($item, array_flip(['included', 'excluded', 'provideByCustomer']));
             }, $serviceOptions['original']['response']['data']);
 
+            $optionImages = $this->optionService->getOptionImages($subCatId);
+
             $data['serviceOptions'] = [
                 'options' => $filteredOptions,
-                'moreInfo' => $moreInfo
+                'moreInfo' => $moreInfo,
+                'optionImages' => json_decode(json_encode($optionImages), true)
             ];
+            // echo '<pre>';
+            // print_r($data['serviceOptions']['optionImages']['original']['response']['data']);
+            // exit;
             return view('options', $data);
         } catch (Exception $e) {
             return $this->response->error(['message' => $e->getMessage()]);

@@ -65,4 +65,14 @@ class OptionService
             return $this->response->error(['message' => $e->getMessage()]);
         }
     }
+
+    public function getOptionImages($subCatId)
+    {
+        try {
+            $options = $this->optionServiceRepository->getOptionImagesBySubCatId($subCatId);
+            return $this->response->success(['data' => $options]);
+        } catch (Exception $e) {
+            return $this->response->error(['message' => $e->getMessage()]);
+        }
+    }
 }

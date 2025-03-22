@@ -21,20 +21,28 @@
                 <!-- LEFT COLUMN (Why Choose Us) -->
                 @if (count($serviceOptions['options']) > 0)
                 <div class="col-12 col-md-3 mb-4 mb-md-0">
-                    <div class="p-3 border rounded shadow-sm h-100">
-                        <h3>Why Choose Our Services?</h3>
-                        <p class="text-muted">
-                            <b>Included: </b>
-                            <span>
-                                {{ $serviceOptions['moreInfo']['included'] }}
-                            </span>
-                        </p>
-                        <p class="text-muted">
-                            <b>Excluded: </b>
-                            <span>
-                                {{ $serviceOptions['moreInfo']['excluded'] }}
-                            </span>
-                        </p>
+                    <div class="p-3 border rounded shadow-sm">
+
+                        <!-- Bootstrap Carousel -->
+                        <div id="serviceCarousel" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                @foreach ($serviceOptions['optionImages']['original']['response']['data'] as $index => $image)
+                                <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                                    <img src="{{ $image['img'] }}" class="d-block w-100 rounded service-carousel-img h-100" alt="Service Image">
+                                </div>
+                                @endforeach
+                            </div>
+
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 @endif

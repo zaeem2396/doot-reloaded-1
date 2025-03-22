@@ -71,4 +71,13 @@ class OptionServiceRepository
             ->where('optionId', $inputData['optionId'])
             ->get();
     }
+
+    /*
+    * Get option images by sub category ID
+    */
+
+    public function getOptionImagesBySubCatId(int $subCatId): Collection
+    {
+        return $this->options->select('img')->where('subCatId', $subCatId)->get();
+    }
 }

@@ -22,7 +22,7 @@ jobs:
 
       - name: Build and start containers
         run: |
-          docker compose up --build
+          docker compose up --build 
 
       - name: Run Laravel migrations
         run: |
